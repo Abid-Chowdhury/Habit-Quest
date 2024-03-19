@@ -1,0 +1,30 @@
+daily habits - tasks that are repeated daily
+todo - one time tasks
+
+tasks give points based on difficulty (5/10/20)
+
+for each daily habit completed:
+    player gets points
+if daily habit not completed:
+    player loses points
+
+for each to do tasks:
+    player gets points if completed within due date
+if todo task not completed before due date:
+    player loses points
+
+main page:
+player mini profile on top
+tasks under
+
+profile page:
+player image
+username
+points
+stats
+    tasks completed
+    habit completed
+    etc
+
+leveling:
+player unlocks more cosmetics/features as they level up
