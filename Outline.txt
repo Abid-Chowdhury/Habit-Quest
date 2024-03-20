@@ -1,3 +1,53 @@
+
+Before Entering perhaps add a Login Screen for Authentication
+Purposes (May Be attractive to recruiters)
+
+
+
+At the top of the App, it features, 
+
+Quests/To do Lists
+Inventory/what user owns
+Shop/ Where user gets new stuff 
+Achivements/Major milestones 
+all the way to the right will be profile section, where user can change 
+their Email and Passwords.
+
+
+Below is another bar that features the Main Character/EG user, as well as 
+his party, EG other players or NPCS, Could also add visuals such as scenery 
+
+Some where near here, may be a calendar the size will be pretty small, 
+A feature could be that it takes an item from calendar and adds it to the do list
+
+
+Below that is a list of Quests/To-Do List 
+and each time it is checked off a coin pops up and is added to balance
+(if unchecked the coin just leaves balance)
+
+On the side add a rewards tab, that features cosmetics for character/party
+
+
+
+Habit Tracker
+Profile 
+Rewards
+Dark Mode/Light Mode
+
+Main Page Features:
+Top Bar: Quests tab, Invenotry Tab, Shop Tab, Achivements Tab,
+to the far left there will be Light Mode/Dark Mode switch and Profile
+
+Main Character Icon + Scenery: Just as it said, Maybe add like a plus
+that can add a party member wether a real person or NPC.
+
+Shows the Quests:  They will be grade into different severities 
+and difficulties and will be assigned points to them (1,2,3,4)
+Values are Assigned according to prioritization Matrix.
+
+calendar:
+
+
 daily habits - tasks that are repeated daily
 todo - one time tasks
 
