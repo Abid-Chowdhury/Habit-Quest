@@ -26,3 +26,17 @@ body {
     height: 300px;
     border-radius: 50%;
 }
+
+.BackgroundBox{
+    width: 1500px;
+    height: 300px; /* Height of the box */
+    
+    border: 0px solid #ccc; /* Border of the box */
+    /*background-color: #A3D5FF;*/
+    background-repeat:no-repeat;
+    background-image: url("..//Assets//Backgrounds/Medival2.jpg");
+    background-size: cover;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
