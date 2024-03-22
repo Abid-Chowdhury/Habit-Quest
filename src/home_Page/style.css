@@ -1,6 +1,5 @@
 body {
     background-image: url('../Assets/Backgrounds/background.jpg');
-    /* background-image: url('E:/Coding/Habit-Quest/src/Assets/Backgrounds/background.jpg'); */
     background-color: #2B2D42;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -12,28 +11,42 @@ body {
 
 
 #left-side {
-    width: 50%;
+    width: 60%;
     color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 64px;
+    }
 }
 
 #right-side {
-    width: 50%;
+    width: 40%;
     color: blue;
 
     & #inner-box {
         background-color: rgba(255,255,255,.7);
         padding-left: 50px;
         padding-right: 50px;
-        padding-top: 150px;
-        margin: 0 auto;
-        height: 100vh;
         width: 50%;
         display: flex;
         flex-direction: column;
+        height: 100vh;
+        flex-grow: 1;
 
         h3 {
             text-align: center;
             margin: 0;
+            margin-top: 150px;
+            font-size: 40px;
         }
 
         hr {
