@@ -20,11 +20,13 @@ body {
 
     h1 {
         font-size: 80px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     h2 {
         margin: 0;
         font-size: 64px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     }
 }
 
@@ -45,7 +47,7 @@ body {
         h3 {
             text-align: center;
             margin: 0;
-            margin-top: 150px;
+            margin-top: 175px;
             font-size: 40px;
         }
 
@@ -63,7 +65,7 @@ body {
             margin-bottom: 20px;
             border: none;
             height: 50px;
-            border-radius: 15px;
+            border-radius: 9px;
             font-size: 20px;
             padding-left: 20px;
             padding-right: 20px;
@@ -74,8 +76,27 @@ body {
         }
 
         input[type="submit"] {
-            background-color: blue;
             color: white;
+            cursor: pointer;
+            padding-left: 33px;
+            padding-right: 33px;
+            padding-bottom: 16px;
+            padding-top: 16px;
+            border-radius: 9px;
+            background: #3333FF;
+            border: none;
+            font-family: inherit;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        input[type="submit"]:hover {
+            box-shadow: 7px 5px 56px -14px rgb(0,0,255);
+        }
+
+        input[type="submit"]:active {
+            transform: scale(0.97);
+            box-shadow: 7px 5px 56px -10px rgb(0,0,255);
         }
 
     }
