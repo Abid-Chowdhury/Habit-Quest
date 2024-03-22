@@ -26,6 +26,10 @@ body {
         display: flex;
         flex-direction: column;
 
+        h2 {
+            text-align: center;
+        }
+
         hr {
             height: 5px;
             width: 100%;
