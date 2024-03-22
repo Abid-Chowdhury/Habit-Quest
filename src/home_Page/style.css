@@ -33,14 +33,34 @@ body {
 
         h3 {
             text-align: center;
+            margin: 0;
         }
 
         hr {
             height: 5px;
             width: 100%;
+            margin-top: 25px;
+            margin-bottom: 25px;
             border-radius: 20px;
             border: none;
             background-color: blue;
         }
+
+        input {
+            margin-bottom: 20px;
+            border: none;
+            height: 50px;
+            border-radius: 15px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+        }
+
     }
 }
