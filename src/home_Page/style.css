@@ -1,5 +1,11 @@
 body {
+    background-image: url('../Assets/Backgrounds/background.jpg');
+    /* background-image: url('E:/Coding/Habit-Quest/src/Assets/Backgrounds/background.jpg'); */
     background-color: #2B2D42;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 0; 
+    padding: 0;
 }
 
 
