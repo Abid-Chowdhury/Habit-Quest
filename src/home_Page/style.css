@@ -1,42 +1,103 @@
 body {
+    background-image: url('../Assets/Backgrounds/background.jpg');
     background-color: #2B2D42;
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    flex-direction: row;
 }
 
-.TopTab{
-    background-color: #2B2D42;
-    width: 1500px;
-    height: 50px;
+
+#left-side {
+    width: 60%;
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+
+    h1 {
+        font-size: 80px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 64px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
 }
 
-.Box{
-    width: 1500px;
-    height: 300px; /* Height of the box */
-    
-    border: 0px solid #ccc; /* Border of the box */
-    background-color: #A3D5FF;
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-}
+#right-side {
+    width: 40%;
+    color: blue;
 
-.Circle{
-    background-color: #8D99AE;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-}
+    & #inner-box {
+        background-color: rgba(255,255,255,.7);
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        flex-grow: 1;
 
-.BackgroundBox{
-    width: 1500px;
-    height: 300px; /* Height of the box */
-    
-    border: 0px solid #ccc; /* Border of the box */
-    /*background-color: #A3D5FF;*/
-    background-repeat:no-repeat;
-    background-image: url("..//Assets//Backgrounds/Medival2.jpg");
-    background-size: cover;
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-}
+        h3 {
+            text-align: center;
+            margin: 0;
+            margin-top: 175px;
+            font-size: 40px;
+        }
 
+        hr {
+            height: 5px;
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            border: none;
+            background-color: blue;
+        }
+
+        input {
+            margin-bottom: 20px;
+            border: none;
+            height: 50px;
+            border-radius: 9px;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input[type="submit"] {
+            color: white;
+            cursor: pointer;
+            padding-left: 33px;
+            padding-right: 33px;
+            padding-bottom: 16px;
+            padding-top: 16px;
+            border-radius: 9px;
+            background: #3333FF;
+            border: none;
+            font-family: inherit;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        input[type="submit"]:hover {
+            box-shadow: 7px 5px 56px -14px rgb(0,0,255);
+        }
+
+        input[type="submit"]:active {
+            transform: scale(0.97);
+            box-shadow: 7px 5px 56px -10px rgb(0,0,255);
+        }
+
+    }
+}
