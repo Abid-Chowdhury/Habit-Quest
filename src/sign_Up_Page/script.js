@@ -16,9 +16,15 @@ input.addEventListener('input', function() {
 });
 
 
+// redirect to home page if user already exists
+function redirectToHomePage() {
+    
+}
+
 // Check if a user already exists
 if (localStorage.getItem('username') !== null) {
     console.log('Username exists!')
+    redirectToHomePage()
 } else {
     console.log('No username found!')
 }
