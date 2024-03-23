@@ -16,6 +16,16 @@ input.addEventListener('input', function() {
 });
 
 
+// submit_Button_Pressed function
+function submit_Button_Pressed() {
+    // get username input
+    var username_Input_Element = document.getElementById('username-field')
+    var username_Input = username_Input_Element.value
+
+    localStorage.setItem('username', username_Input)
+    redirectToHomePage()
+}
+
 // redirect to home page if user already exists
 function redirectToHomePage() {
     window.location.href = '../home_Page/home_Page.html'
