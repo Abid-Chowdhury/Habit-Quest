@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rum+Raisin&display=swap');
+
+/*
+TITLE FONT
+font-family: "Rum Raisin", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+REGULAR FONT (weight: 100-900)
+font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+font-variation-settings:
+"slnt" 0;
+*/
+
+
 body {
     background-image: url('../Assets/Backgrounds/background.jpg');
     background-color: #2B2D42;
@@ -8,7 +26,6 @@ body {
     display: flex;
     flex-direction: row;
 }
-
 
 #left-side {
     width: 60%;
