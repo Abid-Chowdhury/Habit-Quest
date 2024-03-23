@@ -1,3 +1,4 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rum+Raisin&display=swap');
 
 /*
@@ -14,6 +15,24 @@ font-style: normal;
 font-variation-settings:
 "slnt" 0;
 */
+
+/* Colors */
+:root {
+    --blackh: #0C0C14;
+    --blackr: rgba(12, 12, 20, 255);
+
+    --whiteh: #F0F7F4;
+    --whiter: rgba(240, 247, 244, 255);
+
+    --blueh: #279AF1;
+    --bluer: rgba(39, 154, 241, 255);
+
+    --redh: #F93943;
+    --redr: rgba(249, 57, 67, 255);
+
+    --greenh: #9CDE9F;
+    --greenr: rgba(156, 222, 159, 255);
+}
 
 
 body {
