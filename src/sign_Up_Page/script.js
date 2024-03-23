@@ -1,3 +1,5 @@
+// Makes username field alphanumeric
+
 // Get the input element
 var input = document.getElementById('username-field');
 
@@ -12,3 +14,11 @@ input.addEventListener('input', function() {
         this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
     }
 });
+
+
+// Check if a user already exists
+if (localStorage.getItem('username') !== null) {
+    console.log('Username exists!')
+} else {
+    console.log('No username found!')
+}
