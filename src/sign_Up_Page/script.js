@@ -1,3 +1,5 @@
+// Makes username field alphanumeric
+
 // Get the input element
 var input = document.getElementById('username-field');
 
@@ -12,3 +14,24 @@ input.addEventListener('input', function() {
         this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
     }
 });
+
+
+// submit_Button_Pressed function
+function submit_Button_Pressed() {
+    // get username input
+    var username_Input_Element = document.getElementById('username-field')
+    var username_Input = username_Input_Element.value
+
+    localStorage.setItem('username', username_Input)
+    redirectToHomePage()
+}
+
+// redirect to home page if user already exists
+function redirectToHomePage() {
+    window.location.href = '../home_Page/home_Page.html'
+}
+
+// Check if a user already exists
+if (localStorage.getItem('username') !== null) {
+    redirectToHomePage()
+} 
