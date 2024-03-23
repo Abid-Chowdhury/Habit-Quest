@@ -1,26 +1,72 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rum+Raisin&display=swap');
+
+/*
+TITLE FONT
+font-family: "Rum Raisin", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+REGULAR FONT (weight: 100-900)
+font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+font-variation-settings:
+"slnt" 0;
+*/
+
+/* Colors */
+:root {
+    --blackh: #0C0C14;
+    --blackr: rgba(12, 12, 20, 255);
+
+    --whiteh: #F0F7F4;
+    --whiter: rgba(240, 247, 244, 255);
+
+    --blueh: #279AF1;
+    --bluer: rgba(39, 154, 241, 255);
+
+    --redh: #F93943;
+    --redr: rgba(249, 57, 67, 255);
+
+    --greenh: #9CDE9F;
+    --greenr: rgba(156, 222, 159, 255);
+}
+
+
 body {
     background-image: url('../Assets/Backgrounds/background.jpg');
-    background-color: #2B2D42;
+    background-color: var(--blackh);
     background-repeat: no-repeat;
     background-size: cover; 
     margin: 0; 
     padding: 0;
     display: flex;
     flex-direction: row;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
 }
-
 
 #left-side {
     width: 60%;
-    color: white;
+    color: var(--whiteh);
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 100px;
 
     h1 {
-        font-size: 80px;
+        font-size: 160px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-family: "Rum Raisin", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 0;
     }
 
     h2 {
@@ -32,10 +78,10 @@ body {
 
 #right-side {
     width: 40%;
-    color: blue;
+    color: var(--blueh);
 
     & #inner-box {
-        background-color: rgba(255,255,255,.7);
+        background-color: rgba(240, 247, 244, .75);
         padding-left: 50px;
         padding-right: 50px;
         width: 50%;
@@ -47,7 +93,7 @@ body {
         h3 {
             text-align: center;
             margin: 0;
-            margin-top: 175px;
+            margin-top: 200px;
             font-size: 40px;
         }
 
@@ -58,7 +104,7 @@ body {
             margin-bottom: 25px;
             border-radius: 20px;
             border: none;
-            background-color: blue;
+            background-color: var(--blueh);
         }
 
         input {
@@ -83,7 +129,7 @@ body {
             padding-bottom: 16px;
             padding-top: 16px;
             border-radius: 9px;
-            background: #3333FF;
+            background-color: var(--blueh);
             border: none;
             font-family: inherit;
             text-align: center;
@@ -91,12 +137,12 @@ body {
         }
 
         input[type="submit"]:hover {
-            box-shadow: 7px 5px 56px -14px rgb(0,0,255);
+            box-shadow: 7px 5px 56px -14px rgb(50,150,255);
         }
 
         input[type="submit"]:active {
             transform: scale(0.97);
-            box-shadow: 7px 5px 56px -10px rgb(0,0,255);
+            box-shadow: 7px 5px 56px -10px rgb(50,150,255);
         }
 
     }
