@@ -18,7 +18,7 @@ input.addEventListener('input', function() {
 
 // redirect to home page if user already exists
 function redirectToHomePage() {
-    
+    window.location.href = '../home_Page/home_Page.html'
 }
 
 // Check if a user already exists
