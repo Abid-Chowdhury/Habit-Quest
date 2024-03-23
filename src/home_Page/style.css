@@ -37,7 +37,7 @@ font-variation-settings:
 
 body {
     background-image: url('../Assets/Backgrounds/background.jpg');
-    background-color: #2B2D42;
+    background-color: var(--blackh);
     background-repeat: no-repeat;
     background-size: cover; 
     margin: 0; 
@@ -54,7 +54,7 @@ body {
 
 #left-side {
     width: 60%;
-    color: white;
+    color: var(--whiteh);
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
@@ -78,10 +78,10 @@ body {
 
 #right-side {
     width: 40%;
-    color: blue;
+    color: var(--blueh);
 
     & #inner-box {
-        background-color: rgba(255,255,255,.7);
+        background-color: rgba(240, 247, 244, .75);
         padding-left: 50px;
         padding-right: 50px;
         width: 50%;
@@ -104,7 +104,7 @@ body {
             margin-bottom: 25px;
             border-radius: 20px;
             border: none;
-            background-color: blue;
+            background-color: var(--blueh);
         }
 
         input {
@@ -129,7 +129,7 @@ body {
             padding-bottom: 16px;
             padding-top: 16px;
             border-radius: 9px;
-            background: #3333FF;
+            background-color: var(--blueh);
             border: none;
             font-family: inherit;
             text-align: center;
@@ -137,12 +137,12 @@ body {
         }
 
         input[type="submit"]:hover {
-            box-shadow: 7px 5px 56px -14px rgb(0,0,255);
+            box-shadow: 7px 5px 56px -14px rgb(50,150,255);
         }
 
         input[type="submit"]:active {
             transform: scale(0.97);
-            box-shadow: 7px 5px 56px -10px rgb(0,0,255);
+            box-shadow: 7px 5px 56px -10px rgb(50,150,255);
         }
 
     }
