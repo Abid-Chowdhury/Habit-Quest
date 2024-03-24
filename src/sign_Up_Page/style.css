@@ -145,5 +145,9 @@ body {
             box-shadow: 7px 5px 56px -10px rgb(50,150,255);
         }
 
+        a {
+            text-decoration: none;
+        }
+
     }
 }
