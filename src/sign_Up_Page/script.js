@@ -15,6 +15,14 @@ input.addEventListener('input', function() {
     }
 });
 
+// check if user entered a valid username
+function checkIfUsernameValid(username_Input) {
+    if (username_Input.length >= 4) {
+        return true
+    } else {
+        return false
+    }
+}
 
 // submit_Button_Pressed function
 function submit_Button_Pressed() {
@@ -22,8 +30,16 @@ function submit_Button_Pressed() {
     var username_Input_Element = document.getElementById('username-field')
     var username_Input = username_Input_Element.value
 
+    // update username in local storage
     localStorage.setItem('username', username_Input)
-    redirectToHomePage()
+
+    // check if user entered valid username
+    var validUserName = checkIfUsernameValid(username_Input)
+    if (validUserName) {
+        redirectToHomePage()
+    } else {
+        console.log('username not valid')
+    }
 }
 
 // redirect to home page
@@ -31,7 +47,3 @@ function redirectToHomePage() {
     window.location.href = '../home_Page/home_Page.html'
 }
 
-// // Check if a user already exists
-// if (localStorage.getItem('username') !== null) {
-//     redirectToHomePage()
-// } 
