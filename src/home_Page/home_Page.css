@@ -21,9 +21,13 @@
   }
   
   header button{
-    
-    margin: 5px;
     color: rgba(240,247,244,1);
+    background-color: transparent;
+    font-family: Rum Raisin;
+    font-size: 25px;
+    margin: 0;
+    padding:0;
+    border:0;
     
     
     cursor: pointer;
