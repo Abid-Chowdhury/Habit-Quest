@@ -1,0 +1,354 @@
+
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+  .v3_2 {
+    width: 100%;
+    height: 799px;
+    background: url("../images/v3_2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  /*Habit Quest Sign*/
+  .v3_3 {
+    width: 290px;
+    color: rgba(240,247,244,1);
+    
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 50px;
+    opacity: 1;
+    text-align: left;
+  }
+  /*Main Banner*/
+  .v3_4 {
+    width: 100%;
+    height: 194px;
+    background: rgba(39,154,241,1);
+    opacity: 1;
+    position: absolute;
+    top: 105px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  /* Damage Bar*/
+  .v3_5 {
+    width: 77px;
+    color: rgba(255,223,0,1);
+    
+    position: absolute;
+    top: 202px;
+    left: 243px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_6 {
+    width: 127px;
+    height: 128px;
+    background: url("../images/v3_6.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 138px;
+    left: 30px;
+    overflow: hidden;
+  }
+  /* Daily Quest Task List */
+  .v3_7 {
+    width: 272px;
+    height: 421px;
+    background: rgba(240,247,244,1);
+    
+    opacity: 1;
+    position: absolute;
+    top: 376px;
+    left: 320px;
+    overflow: hidden;
+  }
+  /* Weekly Quests*/
+  .v3_8 {
+    width: 272px;
+    height: 421px;
+    background: rgba(240,247,244,1);
+    
+    opacity: 1;
+    position: absolute;
+    top: 378px;
+    left: 654px;
+  }
+  /* Calendar*/
+  .v3_9 {
+    width: 373px;
+    height: 262px;
+    background: rgba(240,247,244,1);
+    
+    opacity: 1;
+    position: absolute;
+    top: 375px;
+    left: 950px;
+    overflow: hidden;
+  }
+  .v3_10 {
+    width: 119px;
+    color: rgba(240,247,244,1);
+    position: absolute;
+    top: 319px;
+    left: 320px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_11 {
+    width: 272px;
+    height: 421px;
+    background: rgba(240,247,244,1);
+    opacity: 1;
+    position: absolute;
+    top: 375px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v3_12 {
+    width: 66px;
+    color: rgba(240,247,244,1);
+    position: absolute;
+    top: 322px;
+    left: 0px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_13 {
+    width: 45px;
+    height: 42px;
+    background: url("../images/v3_13.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 42px;
+    left: 364px;
+    overflow: hidden;
+  }
+  .v3_14 {
+    width: 75px;
+    color: rgba(240,247,244,1);
+    position: absolute;
+    top: 326px;
+    left: 629px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+   /*Main Character Circle */
+  .v3_15 {
+    width: 181px;
+    height: 167px;
+    background: rgba(217,217,217,1);
+    
+    opacity: 1;
+    position: absolute;
+    top: 119px;
+    left: 3px;
+    border-radius: 50%;
+  }
+  /*Shop Sign */
+  .v3_16 {
+    width: 52px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 44px;
+    left: 320px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  /*Achivements Sign */
+  .v3_17 {
+    width: 145px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 46px;
+    left: 526px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_18 {
+    width: 98px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 46px;
+    left: 671px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_19 {
+    width: 103px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 44px;
+    left: 405px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_20 {
+    width: 60px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 46px;
+    left: 520px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_21 {
+    width: 81px;
+    height: 81px;
+    background: rgba(217,217,217,1);
+    opacity: 1;
+    position: absolute;
+    top: 13px;
+    left: 110px;
+    border-radius: 50%;
+  }
+  .v3_22 {
+    width: 109px;
+    height: 106px;
+    background: url("../images/v3_22.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 124px;
+    overflow: hidden;
+  }
+  .v3_23 {
+    width: 32px;
+    height: 34px;
+    background: url("../images/v3_23.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 46px;
+    left: 246px;
+    overflow: hidden;
+  }
+  .v3_24 {
+    width: 39px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 44px;
+    left: 197px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_25 {
+    width: 38px;
+    height: 28px;
+    background: url("../images/v3_25.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 161px;
+    left: 197px;
+    overflow: hidden;
+  }
+  .v3_26 {
+    width: 77px;
+    color: rgba(249,57,67,1);
+    position: absolute;
+    top: 155px;
+    left: 243px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_27 {
+    width: 129px;
+    height: 52px;
+    background: url("../images/v3_27.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 192px;
+    left: 147px;
+    overflow: hidden;
+  }
+  .v3_28 {
+    width: 126px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 324px;
+    left: 364px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 40px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v3_29 {
+    width: 24px;
+    color: rgba(255,223,0,1);
+    position: absolute;
+    top: 44px;
+    left: 301px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  
