@@ -19,19 +19,21 @@
     display: flex; /* Use flexbox to control the layout */
     align-items: center; /* Align items vertically */
   }
-  
-  header button{
-    color: rgba(240,247,244,1);
+  header button {
+    margin-left: 50px;
+    color: rgba(240, 247, 244, 1);
     background-color: transparent;
     font-family: Rum Raisin;
     font-size: 25px;
-    margin: 0;
+  
+    
     padding:0;
     border:0;
-    
-    
     cursor: pointer;
-  }
+    /* Add any other styles you want to apply to the buttons */
+}
+
+
   /*Habit Quest Sign*/
   .HabitQuestSign {
     width: 290px;
@@ -65,7 +67,7 @@
     color: rgba(255,223,0,1);
     
     position: absolute;
-    top: 202px;
+    top: 100px;
     left: 243px;
     font-family: Rum Raisin;
     font-weight: Regular;
@@ -82,7 +84,7 @@
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 138px;
+    top: 25px;
     left: 30px;
     overflow: hidden;
   }
@@ -184,10 +186,10 @@
     width: 181px;
     height: 167px;
     background: rgba(217,217,217,1);
-    
+    top: 25px;
     opacity: 1;
     position: absolute;
-    top: 119px;
+    
     left: 3px;
     border-radius: 50%;
   }
@@ -310,7 +312,7 @@
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 161px;
+    top: 65px;
     left: 197px;
     overflow: hidden;
   }
@@ -318,7 +320,7 @@
     width: 77px;
     color: rgba(249,57,67,1);
     position: absolute;
-    top: 155px;
+    top: 55px;
     left: 243px;
     font-family: Rum Raisin;
     font-weight: Regular;
@@ -335,7 +337,7 @@
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 192px;
+    top: 100px;
     left: 147px;
     overflow: hidden;
   }
