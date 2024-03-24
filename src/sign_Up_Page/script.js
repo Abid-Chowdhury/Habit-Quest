@@ -26,12 +26,12 @@ function submit_Button_Pressed() {
     redirectToHomePage()
 }
 
-// redirect to home page if user already exists
+// redirect to home page
 function redirectToHomePage() {
     window.location.href = '../home_Page/home_Page.html'
 }
 
-// Check if a user already exists
-if (localStorage.getItem('username') !== null) {
-    redirectToHomePage()
-} 
+// // Check if a user already exists
+// if (localStorage.getItem('username') !== null) {
+//     redirectToHomePage()
+// } 
