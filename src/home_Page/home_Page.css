@@ -6,21 +6,11 @@
   body {
     font-size: 14px;
   }
-  .v3_2 {
-    width: 100%;
-    height: 799px;
-    background: url("../images/v3_2.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-  }
+  /*Likely Redundant*/
+  
+  
   /*Habit Quest Sign*/
-  .v3_3 {
+  .HabitQuestSign {
     width: 290px;
     color: rgba(240,247,244,1);
     
@@ -34,7 +24,7 @@
     text-align: left;
   }
   /*Main Banner*/
-  .v3_4 {
+  .MainBanner {
     width: 100%;
     height: 194px;
     background: rgba(39,154,241,1);
@@ -47,7 +37,7 @@
     overflow: hidden;
   }
   /* Damage Bar*/
-  .v3_5 {
+  .Power {
     width: 77px;
     color: rgba(255,223,0,1);
     
@@ -60,10 +50,10 @@
     opacity: 1;
     text-align: left;
   }
-  .v3_6 {
+  .MainCharacterImage {
     width: 127px;
     height: 128px;
-    background: url("../images/v3_6.png");
+    background: url("../Assets/Characters/BlueHairHeroine1.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -74,7 +64,7 @@
     overflow: hidden;
   }
   /* Daily Quest Task List */
-  .v3_7 {
+  .DailyTask {
     width: 272px;
     height: 421px;
     background: rgba(240,247,244,1);
@@ -86,18 +76,17 @@
     overflow: hidden;
   }
   /* Weekly Quests*/
-  .v3_8 {
+  .WeeklyTask {
     width: 272px;
     height: 421px;
     background: rgba(240,247,244,1);
-    
     opacity: 1;
     position: absolute;
     top: 378px;
     left: 654px;
   }
   /* Calendar*/
-  .v3_9 {
+  .CalendarBox {
     width: 373px;
     height: 262px;
     background: rgba(240,247,244,1);
@@ -108,7 +97,7 @@
     left: 950px;
     overflow: hidden;
   }
-  .v3_10 {
+  .DailyQuestSign {
     width: 119px;
     color: rgba(240,247,244,1);
     position: absolute;
@@ -120,7 +109,7 @@
     opacity: 1;
     text-align: left;
   }
-  .v3_11 {
+  .HabitsBox {
     width: 272px;
     height: 421px;
     background: rgba(240,247,244,1);
@@ -130,7 +119,7 @@
     left: 0px;
     overflow: hidden;
   }
-  .v3_12 {
+  .HabitsSign {
     width: 66px;
     color: rgba(240,247,244,1);
     position: absolute;
@@ -142,20 +131,20 @@
     opacity: 1;
     text-align: left;
   }
-  .v3_13 {
+  .CoinImage {
     width: 45px;
     height: 42px;
-    background: url("../images/v3_13.png");
+    background: url("../Assets/Symbols/CoinNoBG.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
     top: 42px;
-    left: 364px;
+    left: 750px;
     overflow: hidden;
   }
-  .v3_14 {
+  .WeeklySign {
     width: 75px;
     color: rgba(240,247,244,1);
     position: absolute;
@@ -168,7 +157,7 @@
     text-align: left;
   }
    /*Main Character Circle */
-  .v3_15 {
+  .MainCharacterFiller {
     width: 181px;
     height: 167px;
     background: rgba(217,217,217,1);
@@ -180,7 +169,7 @@
     border-radius: 50%;
   }
   /*Shop Sign */
-  .v3_16 {
+  .ShopPage {
     width: 52px;
     color: rgba(255,255,255,1);
     position: absolute;
@@ -193,7 +182,7 @@
     text-align: left;
   }
   /*Achivements Sign */
-  .v3_17 {
+  .AchivementsPage{
     width: 145px;
     color: rgba(255,255,255,1);
     position: absolute;
@@ -205,19 +194,19 @@
     opacity: 1;
     text-align: left;
   }
-  .v3_18 {
+  .ProgressPage {
     width: 98px;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 46px;
-    left: 671px;
+    left: 700px;
     font-family: Rum Raisin;
     font-weight: Regular;
     font-size: 30px;
     opacity: 1;
     text-align: left;
   }
-  .v3_19 {
+  .InventoryPage {
     width: 103px;
     color: rgba(255,255,255,1);
     position: absolute;
@@ -229,70 +218,70 @@
     opacity: 1;
     text-align: left;
   }
-  .v3_20 {
+  .PartySignPage {
     width: 60px;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 46px;
-    left: 520px;
+    left: 850px;
     font-family: Rum Raisin;
     font-weight: Regular;
     font-size: 30px;
     opacity: 1;
     text-align: left;
   }
-  .v3_21 {
+  .ProfileFiller {
     width: 81px;
     height: 81px;
     background: rgba(217,217,217,1);
     opacity: 1;
     position: absolute;
     top: 13px;
-    left: 110px;
+    left: 1250px;
     border-radius: 50%;
   }
-  .v3_22 {
+  .ProfilePicture {
     width: 109px;
     height: 106px;
-    background: url("../images/v3_22.png");
+    background: url("../Assets/Symbols/PorscheCircleNoBG.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
     top: 0px;
-    left: 124px;
+    left: 1230px;
     overflow: hidden;
   }
-  .v3_23 {
+  .CoinImage {
     width: 32px;
     height: 34px;
-    background: url("../images/v3_23.png");
+    background: url("../Assets/Symbols/CoinNoBG.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
     top: 46px;
-    left: 246px;
+    left: 1100px;
     overflow: hidden;
   }
-  .v3_24 {
+  .CoinBalance {
     width: 39px;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 44px;
-    left: 197px;
+    left: 1150px;
     font-family: Rum Raisin;
     font-weight: Regular;
     font-size: 30px;
     opacity: 1;
     text-align: left;
   }
-  .v3_25 {
+  .HeartImage {
     width: 38px;
     height: 28px;
-    background: url("../images/v3_25.png");
+    background: url("../Assets/Symbols/RedHeartNoBG.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -302,7 +291,7 @@
     left: 197px;
     overflow: hidden;
   }
-  .v3_26 {
+  .HeartNumbers {
     width: 77px;
     color: rgba(249,57,67,1);
     position: absolute;
@@ -314,10 +303,10 @@
     opacity: 1;
     text-align: left;
   }
-  .v3_27 {
+  .SwordImage {
     width: 129px;
     height: 52px;
-    background: url("../images/v3_27.png");
+    background: url("../Assets/Symbols/GoldenSwordNoBG.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -327,28 +316,45 @@
     left: 147px;
     overflow: hidden;
   }
-  .v3_28 {
+  
+  .CalendarView {
     width: 126px;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 324px;
-    left: 364px;
+    left: 1000px;
     font-family: Rum Raisin;
     font-weight: Regular;
     font-size: 40px;
     opacity: 1;
     text-align: left;
   }
-  .v3_29 {
+  .FireImage {
+    width: 32px;
+    height: 34px;
+    background: url("../Assets/Symbols/FireNoBG.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 46px;
+    left: 1010px;
+    overflow: hidden;
+  }
+ .DailyStreakCount {
     width: 24px;
     color: rgba(255,223,0,1);
     position: absolute;
     top: 44px;
-    left: 301px;
+    left: 1050px;
     font-family: Rum Raisin;
     font-weight: Regular;
     font-size: 30px;
     opacity: 1;
     text-align: left;
+
+   
+    
   }
   
