@@ -109,7 +109,6 @@ body {
         }
 
         input {
-            margin-bottom: 20px;
             border: none;
             height: 50px;
             border-radius: 9px;
@@ -123,6 +122,7 @@ body {
         }
 
         input[type="submit"] {
+            margin-bottom: 20px;
             color: white;
             cursor: pointer;
             padding-left: 33px;
@@ -144,6 +144,15 @@ body {
         input[type="submit"]:active {
             transform: scale(0.97);
             box-shadow: 7px 5px 56px -10px rgb(50,150,255);
+        }
+
+        p {
+            /* color: var(--redh); */
+            color: rgba(0,0,0,0);
+            user-select: none;
+            font-weight: 500;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
         a {

@@ -19,8 +19,12 @@
         <div id="inner-box">
             <h3>Sign Up</h3>
             <hr>
+            
             <input type="text" id="username-field" placeholder="Username" maxlength="30">
-            <input type="password" id="username-field" placeholder="Password" maxlength="30">
+            <p id="username-invalid-text">Username must be 4 characters or longer!</p>
+            <input type="password" id="password-field" placeholder="Password" maxlength="30">
+            <p id="password-invalid-text">Password must be 4 characters or longer!</p>
+            
             <input type="submit" value="Start" onclick="submit_Button_Pressed()">
             <a href="">Log In</a>
         </div>

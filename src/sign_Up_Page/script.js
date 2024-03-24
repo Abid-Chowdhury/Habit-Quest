@@ -24,6 +24,12 @@ function checkIfUsernameValid(username_Input) {
     }
 }
 
+// username invalid message
+function usernameInvalidMessage() {
+    var username_Invalid_Text = document.getElementById('username-invalid-text')
+    username_Invalid_Text.style.color = '#F93943'
+}
+
 // submit_Button_Pressed function
 function submit_Button_Pressed() {
     // get username input
@@ -38,7 +44,9 @@ function submit_Button_Pressed() {
     if (validUserName) {
         redirectToHomePage()
     } else {
-        console.log('username not valid')
+        if (!validUserName) {
+            usernameInvalidMessage()
+        }
     }
 }
 
