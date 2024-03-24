@@ -67,9 +67,6 @@ function submit_Button_Pressed() {
     var password_Input_Element = document.getElementById('password-field')
     var password_Input = password_Input_Element.value
 
-    // update username in local storage
-    localStorage.setItem('username', username_Input)
-
     // check if user entered valid username
     var validUserName = checkIfUsernameValid(username_Input)
 
@@ -78,6 +75,12 @@ function submit_Button_Pressed() {
 
     if (validUserName && validPassword) {
         redirectToHomePage()
+        
+        // update username in local storage
+        localStorage.setItem('username', username_Input)
+
+        // update password in local storage
+        localStorage.setItem('password', password_Input)
     } else {
         if (!validUserName) {
             usernameInvalidMessage()
