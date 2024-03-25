@@ -1,6 +1,6 @@
 // makes sure username field is alphanumeric
 // get the input element
-var input = document.getElementById('username-field');
+var input = document.getElementById('usernameField');
 
 // add event listener to the input field
 input.addEventListener('input', function() {
@@ -15,8 +15,8 @@ input.addEventListener('input', function() {
 });
 
 // check if user entered a valid username
-function checkIfUsernameValid(username_Input) {
-    if (username_Input.length >= 4) {
+function checkIfUsernameValid(usernameInput) {
+    if (usernameInput.length >= 4) {
         return true
     } else {
         return false
@@ -24,8 +24,8 @@ function checkIfUsernameValid(username_Input) {
 }
 
 // check if user entered a valid password
-function checkIfPasswordValid(password_Input) {
-    if (password_Input.length >= 4) {
+function checkIfPasswordValid(passwordInput) {
+    if (passwordInput.length >= 4) {
         return true
     } else {
         return false
@@ -34,78 +34,78 @@ function checkIfPasswordValid(password_Input) {
 
 // reset username/password invalid messages
 function resetUserPassInvalidMessage() {
-    var username_Invalid_Text = document.getElementById('username-invalid-text')
-    var password_Invalid_Text = document.getElementById('password-invalid-text')
-    username_Invalid_Text.style.color = 'rgba(0,0,0,0)'
-    password_Invalid_Text.style.color = 'rgba(0,0,0,0)'
-    username_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
-    password_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
+    var usernameInvalidText = document.getElementById('usernameInvalidText')
+    var passwordInvalidText = document.getElementById('passwordInvalidText')
+    usernameInvalidText.style.color = 'rgba(0,0,0,0)'
+    passwordInvalidText.style.color = 'rgba(0,0,0,0)'
+    usernameInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
+    passwordInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
 }
 
 // password invalid message
 function passwordInvalidMessage() {
-    var password_Invalid_Text = document.getElementById('password-invalid-text')
-    password_Invalid_Text.style.color = '#F93943'
-    password_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
+    var passwordInvalidText = document.getElementById('passwordInvalidText')
+    passwordInvalidText.style.color = '#F93943'
+    passwordInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
 }
 
 // username invalid message
 function usernameInvalidMessage() {
-    var username_Invalid_Text = document.getElementById('username-invalid-text')
-    username_Invalid_Text.style.color = '#F93943'
-    username_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
+    var usernameInvalidText = document.getElementById('usernameInvalidText')
+    usernameInvalidText.style.color = '#F93943'
+    usernameInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
 }
 
 // get username input
-function get_Username_Input() {
-    var username_Input_Element = document.getElementById('username-field')
-    var username_Input = username_Input_Element.value
-    return username_Input
+function getUsernameInput() {
+    var usernameInputElement = document.getElementById('usernameField')
+    var usernameInput = usernameInputElement.value
+    return usernameInput
 }
 
 // get password input
-function get_Password_Input() {
-    var password_Input_Element = document.getElementById('password-field')
-    var password_Input = password_Input_Element.value
-    return password_Input
+function getPasswordInput() {
+    var passwordInputElement = document.getElementById('passwordField')
+    var passwordInput = passwordInputElement.value
+    return passwordInput
 }
 
 // update username in local storage function
-function update_Username_In_Local_Storage(username_Input) {
-    localStorage.setItem('username', username_Input)
+function updateUsernameInLocalStorage(usernameInput) {
+    localStorage.setItem('username', usernameInput)
 }
 
 // update password in local storage function
-function update_Password_In_Local_Storage(password_Input) {
-    localStorage.setItem('password', password_Input)
+function updatePasswordInLocalStorage(passwordInput) {
+    localStorage.setItem('password', passwordInput)
 }
 
-// submit_Button_Pressed function
-function submit_Button_Pressed() {
+// submitButtonPressed function
+function submitButtonPressed() {
     // hide invalid messages
     resetUserPassInvalidMessage()
 
     // get username input
-    var username_Input = get_Username_Input()
+    var usernameInput = getUsernameInput()
 
     // get password input
-    var password_Input = get_Password_Input()
+    var passwordInput = getPasswordInput()
 
     // check if user entered valid username
-    var validUserName = checkIfUsernameValid(username_Input)
+    var validUserName = checkIfUsernameValid(usernameInput)
 
     // check if user entered valid password
-    var validPassword = checkIfPasswordValid(password_Input)
+    var validPassword = checkIfPasswordValid(passwordInput)
 
     // if username and passwords are valid, redirect to home page
     if (validUserName && validPassword) {
         redirectToHomePage()
         
         // update username in local storage
-        update_Username_In_Local_Storage(username_Input)
+        updateUsernameInLocalStorage(usernameInput)
 
         // update password in local storage
-        update_Password_In_Local_Storage(password_Input)
+        updatePasswordInLocalStorage(passwordInput)
 
     // else show invalid username and/or invalid password message
     } else {
