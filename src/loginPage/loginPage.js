@@ -108,6 +108,18 @@ function wrongUsernameAndPasswordMessage() {
     wrongUserOrPassText.style.display = 'block'
 }
 
+// redirect to home page
+function redirectToHomePage() {
+    window.location.href = '../home_Page/home_Page.html'
+}
+
+// if enter button pressed, activate submitButtonPressed function
+document.addEventListener('keydown', (event) => {
+    if (event.key == "Enter") {
+        submitButtonPressed()
+    }
+})
+
 // submitButtonPressed function
 function submitButtonPressed() {
     // hide invalid messages
@@ -144,10 +156,5 @@ function submitButtonPressed() {
             passwordInvalidMessage()
         }
     }
-}
-
-// redirect to home page
-function redirectToHomePage() {
-    window.location.href = '../home_Page/home_Page.html'
 }
 
