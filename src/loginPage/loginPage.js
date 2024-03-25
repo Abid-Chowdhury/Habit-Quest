@@ -153,7 +153,7 @@ function submitButtonPressed() {
             usernameInvalidMessage()
         }
         if (!validPassword) {
-            passwordInvalidMessage()
+            // passwordInvalidMessage()
         }
     }
 }
