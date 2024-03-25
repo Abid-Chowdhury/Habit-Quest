@@ -77,10 +77,10 @@ function submit_Button_Pressed() {
     resetUserPassInvalidMessage()
 
     // get username input
-    username_Input = get_Username_Input()
+    var username_Input = get_Username_Input()
 
     // get password input
-    password_Input = get_Password_Input()
+    var password_Input = get_Password_Input()
 
     // check if user entered valid username
     var validUserName = checkIfUsernameValid(username_Input)
