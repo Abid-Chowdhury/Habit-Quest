@@ -150,7 +150,8 @@ body {
         }
 
         p {
-            color: rgba(0,0,0,0);
+            color: var(--redh);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
             user-select: none;
             font-weight: 500;
             margin-top: 5px;
@@ -160,10 +161,6 @@ body {
 
         .invalidTextBox {
             height: 30px;
-        }
-
-        #wrongUserOrPassText {
-            color: red;
         }
 
         a {

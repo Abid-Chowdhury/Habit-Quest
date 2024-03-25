@@ -36,24 +36,22 @@ function checkIfPasswordValid(passwordInput) {
 function resetUserPassInvalidMessage() {
     var usernameInvalidText = document.getElementById('usernameInvalidText')
     var passwordInvalidText = document.getElementById('passwordInvalidText')
-    usernameInvalidText.style.color = 'rgba(0,0,0,0)'
-    passwordInvalidText.style.color = 'rgba(0,0,0,0)'
-    usernameInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
-    passwordInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
+    var wrongUserOrPassText = document.getElementById('wrongUserOrPassText')
+    usernameInvalidText.style.display = 'none'
+    passwordInvalidText.style.display = 'none'
+    wrongUserOrPassText.style.display = 'none'
 }
 
 // password invalid message
 function passwordInvalidMessage() {
     var passwordInvalidText = document.getElementById('passwordInvalidText')
-    passwordInvalidText.style.color = '#F93943'
-    passwordInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
+    passwordInvalidText.style.display = 'block'
 }
 
 // username invalid message
 function usernameInvalidMessage() {
     var usernameInvalidText = document.getElementById('usernameInvalidText')
-    usernameInvalidText.style.color = '#F93943'
-    usernameInvalidText.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
+    usernameInvalidText.style.display = 'block'
 }
 
 // get username input
@@ -106,7 +104,8 @@ function checkIfUserAndPassCorrect(usernameInput, passwordInput) {
 
 // wrong username and password error message
 function wrongUsernameAndPasswordMessage() {
-    
+    var wrongUserOrPassText = document.getElementById('wrongUserOrPassText')
+    wrongUserOrPassText.style.display = 'block'
 }
 
 // submitButtonPressed function
