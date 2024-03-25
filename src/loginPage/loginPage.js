@@ -80,6 +80,31 @@ function updatePasswordInLocalStorage(passwordInput) {
     localStorage.setItem('password', passwordInput)
 }
 
+// check if username is correct
+function usernameCorrectCheck(usernameInput) {
+    if (localStorage.getItem('username') == usernameInput) {
+        return true
+    }
+    return false
+}
+
+// check if password is correct
+function passwordCorrectCheck(passwordInput) {
+    if (localStorage.getItem('password') == passwordInput) {
+        return true
+    }
+    return false
+}
+
+
+// check if username and password is correct
+function checkIfUserAndPassCorrect(usernameInput, passwordInput) {
+    if (usernameCorrectCheck(usernameInput) && passwordCorrectCheck(passwordInput)) {
+        return true
+    } 
+    return false
+}
+
 // submitButtonPressed function
 function submitButtonPressed() {
     // hide invalid messages
@@ -97,15 +122,21 @@ function submitButtonPressed() {
     // check if user entered valid password
     var validPassword = checkIfPasswordValid(passwordInput)
 
-    // if username and passwords are valid, redirect to home page
+    // if username and passwords are valid, check if user and pass match localstorage
+    // if match -> redirect to home page
+    // else show wrong user or pass message
     if (validUserName && validPassword) {
-        redirectToHomePage()
+        if (checkIfUserAndPassCorrect(usernameInput, passwordInput)) {
+            redirectToHomePage()
+        } else {
+            console.log('wrong user and pass')
+        }
         
         // update username in local storage
-        updateUsernameInLocalStorage(usernameInput)
+        // updateUsernameInLocalStorage(usernameInput)
 
         // update password in local storage
-        updatePasswordInLocalStorage(passwordInput)
+        // updatePasswordInLocalStorage(passwordInput)
 
     // else show invalid username and/or invalid password message
     } else {
