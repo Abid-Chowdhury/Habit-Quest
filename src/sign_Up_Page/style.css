@@ -34,7 +34,6 @@ font-variation-settings:
     --greenr: rgba(156, 222, 159, 255);
 }
 
-
 body {
     background-image: url('../Assets/Backgrounds/background.jpg');
     background-color: var(--blackh);

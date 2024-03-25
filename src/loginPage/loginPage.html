@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Quest | Sign Up</title>
+    <link rel="icon" href="../Assets/Characters/Heroine2.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="loginPage.css">
+</head>
+<body>
+    
+    <div id="leftSide">
+        <h1>Habit Quest</h1>
+        <h2>Level Up Your Life</h2>
+        <h2>One Habit at a Time</h2>
+    </div>
+
+    <div id="rightSide">
+        <div id="innerBox">
+            <h3>Log In</h3>
+            <hr>
+            
+            <input type="text" id="usernameField" placeholder="Username" maxlength="30">
+            <div class="invalidTextBox">
+                <p id="usernameInvalidText">Username must be 4 characters or longer!</p>
+            </div>
+            <input type="password" id="passwordField" placeholder="Password" maxlength="30">
+            <div class="invalidTextBox">
+                <p id="passwordInvalidText">Password must be 4 characters or longer!</p>
+                <p id="wrongUserOrPassText">Wrong username or password!</p>
+            </div>
+            
+            <input type="submit" value="Log In" onclick="submitButtonPressed()">
+            <a href="..\sign_Up_Page\index.html">Sign Up</a>
+        </div>
+    </div>
+
+    <script src="loginPage.js"></script>
+
+</body>
+</html>
