@@ -1,18 +1,18 @@
 // makes sure username field is alphanumeric
 // get the input element
-var input = document.getElementById('usernameField');
+var input = document.getElementById('usernameField')
 
 // add event listener to the input field
 input.addEventListener('input', function() {
     // regular expression to match only alphanumeric characters
-    var regex = /^[a-zA-Z0-9]*$/;
+    var regex = /^[a-zA-Z0-9]*$/
     
     // check if the input value matches the regular expression
     if (!regex.test(this.value)) {
         // if the input value contains characters other than alphanumeric, remove them
-        this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+        this.value = this.value.replace(/[^a-zA-Z0-9]/g, '')
     }
-});
+})
 
 // check if user entered a valid username
 function checkIfUsernameValid(usernameInput) {
