@@ -1,16 +1,15 @@
-// Makes username field alphanumeric
-
-// Get the input element
+// makes sure username field is alphanumeric
+// get the input element
 var input = document.getElementById('username-field');
 
-// Add event listener to the input field
+// add event listener to the input field
 input.addEventListener('input', function() {
-    // Regular expression to match only alphanumeric characters
+    // regular expression to match only alphanumeric characters
     var regex = /^[a-zA-Z0-9]*$/;
     
-    // Check if the input value matches the regular expression
+    // check if the input value matches the regular expression
     if (!regex.test(this.value)) {
-        // If the input value contains characters other than alphanumeric, remove them
+        // if the input value contains characters other than alphanumeric, remove them
         this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
     }
 });
@@ -98,6 +97,7 @@ function submit_Button_Pressed() {
     // check if user entered valid password
     var validPassword = checkIfPasswordValid(password_Input)
 
+    // if username and passwords are valid, redirect to home page
     if (validUserName && validPassword) {
         redirectToHomePage()
         
@@ -107,6 +107,7 @@ function submit_Button_Pressed() {
         // update password in local storage
         update_Password_In_Local_Storage(password_Input)
 
+    // else show invalid username and/or invalid password message
     } else {
         if (!validUserName) {
             usernameInvalidMessage()

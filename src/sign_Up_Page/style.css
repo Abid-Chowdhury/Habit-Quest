@@ -150,13 +150,11 @@ body {
         }
 
         p {
-            /* color: var(--redh); */
             color: rgba(0,0,0,0);
             user-select: none;
             font-weight: 500;
             margin-top: 5px;
             margin-bottom: 5px;
-            /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);  */
         }
 
         a {
