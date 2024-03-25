@@ -52,7 +52,7 @@ body {
     "slnt" 0;
 }
 
-#left-side {
+#leftSide {
     width: 60%;
     color: var(--whiteh);
     text-align: center;
@@ -76,11 +76,11 @@ body {
     }
 }
 
-#right-side {
+#rightSide {
     width: 40%;
     color: var(--blueh);
 
-    & #inner-box {
+    & #innerBox {
         background-color: rgba(240, 247, 244, .75);
         padding-left: 50px;
         padding-right: 50px;
