@@ -32,11 +32,29 @@
     cursor: pointer;
     /* Add any other styles you want to apply to the buttons */
   }
+  
+  .Words{
+    color:rgba(240,247,244,1);
+    font-family:Inter;
+    font-size: 30px;
+    
+  }
+  
+  .BottomRowWords{
+    display:flex;
+    justify-content: space-between ;
+    position:relative;
+    top:300px;
+   
+  }
+
+
 
   .BottomRow{
     display:flex;
     justify-content: space-between;
     position:relative;
+    top:350px;
   }
   .TaskBox{
     width: 272px;
@@ -65,19 +83,7 @@
  
 
   /*Habit Quest Sign*/
-  .HabitQuestSign {
-    width: 290px;
-    color: rgba(240,247,244,1);
-    
-    position: absolute;
-    top: 25px;
-    left: 30px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 50px;
-    opacity: 1;
-    text-align: left;
-  }
+
   /*Main Banner*/
   .MainBanner {
     width: 100%;
@@ -121,41 +127,10 @@
   /* Daily Quest Task List */
 
   /* Weekly Quests*/
-  .WeeklyTask {
-    width: 272px;
-    height: 421px;
-    background: rgba(240,247,244,1);
-    opacity: 1;
-    position: absolute;
-    top: 378px;
-    left: 654px;
-  }
 
-  .DailyQuestSign {
-    width: 119px;
-    color: rgba(240,247,244,1);
-    position: absolute;
-    top: 319px;
-    left: 320px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  
-  .HabitsSign {
-    width: 66px;
-    color: rgba(240,247,244,1);
-    position: absolute;
-    top: 322px;
-    left: 0px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
+
+
+
   .CoinImage {
     width: 45px;
     height: 42px;
@@ -169,18 +144,7 @@
     left: 750px;
     overflow: hidden;
   }
-  .WeeklySign {
-    width: 75px;
-    color: rgba(240,247,244,1);
-    position: absolute;
-    top: 326px;
-    left: 629px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
+
    /*Main Character Circle */
   .MainCharacterFiller {
     width: 181px;
@@ -194,18 +158,7 @@
     border-radius: 50%;
   }
   /*Shop Sign */
-  .ShopPage {
-    width: 52px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 44px;
-    left: 320px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
+
 
 
 
@@ -296,18 +249,7 @@
     overflow: hidden;
   }
   
-  .CalendarView {
-    width: 126px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 324px;
-    left: 1000px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 40px;
-    opacity: 1;
-    text-align: left;
-  }
+
   .FireImage {
     width: 32px;
     height: 34px;
