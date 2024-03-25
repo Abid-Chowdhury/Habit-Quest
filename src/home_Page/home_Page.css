@@ -31,8 +31,38 @@
     border:0;
     cursor: pointer;
     /* Add any other styles you want to apply to the buttons */
-}
+  }
 
+  .BottomRow{
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+  }
+  .TaskBox{
+    width: 272px;
+    height: 421px;
+    background: rgba(240,247,244,1);
+    opacity: 1;
+    align-items: center;
+    top:376px;
+    overflow: hidden;
+    
+
+  }
+    .CalendarBox {
+    width: 300px;
+    height: 300px;
+    background: rgba(240,247,244,1);
+    
+    opacity: 1;
+    
+    align-items: center;
+    top: 375px;
+    
+    overflow: hidden;
+  }
+
+ 
 
   /*Habit Quest Sign*/
   .HabitQuestSign {
@@ -89,17 +119,7 @@
     overflow: hidden;
   }
   /* Daily Quest Task List */
-  .DailyTask {
-    width: 272px;
-    height: 421px;
-    background: rgba(240,247,244,1);
-    
-    opacity: 1;
-    position: absolute;
-    top: 376px;
-    left: 320px;
-    overflow: hidden;
-  }
+
   /* Weekly Quests*/
   .WeeklyTask {
     width: 272px;
@@ -110,18 +130,7 @@
     top: 378px;
     left: 654px;
   }
-  /* Calendar*/
-  .CalendarBox {
-    width: 373px;
-    height: 262px;
-    background: rgba(240,247,244,1);
-    
-    opacity: 1;
-    position: absolute;
-    top: 375px;
-    left: 950px;
-    overflow: hidden;
-  }
+
   .DailyQuestSign {
     width: 119px;
     color: rgba(240,247,244,1);
@@ -134,16 +143,7 @@
     opacity: 1;
     text-align: left;
   }
-  .HabitsBox {
-    width: 272px;
-    height: 421px;
-    background: rgba(240,247,244,1);
-    opacity: 1;
-    position: absolute;
-    top: 375px;
-    left: 0px;
-    overflow: hidden;
-  }
+  
   .HabitsSign {
     width: 66px;
     color: rgba(240,247,244,1);
@@ -206,55 +206,9 @@
     opacity: 1;
     text-align: left;
   }
-  /*Achivements Sign */
-  .AchivementsPage{
-    width: 145px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 46px;
-    left: 526px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .ProgressPage {
-    width: 98px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 46px;
-    left: 700px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .InventoryPage {
-    width: 103px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 44px;
-    left: 405px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .PartySignPage {
-    width: 60px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 46px;
-    left: 850px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
+
+
+
   .ProfileFiller {
     width: 81px;
     height: 81px;
