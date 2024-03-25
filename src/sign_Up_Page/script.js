@@ -35,7 +35,6 @@ function checkIfPasswordValid(password_Input) {
 
 // reset username/password invalid messages
 function resetUserPassInvalidMessage() {
-    console.log("hel;")
     var username_Invalid_Text = document.getElementById('username-invalid-text')
     var password_Invalid_Text = document.getElementById('password-invalid-text')
     username_Invalid_Text.style.color = 'rgba(0,0,0,0)'
@@ -58,18 +57,30 @@ function usernameInvalidMessage() {
     username_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
 }
 
+// get username input
+function get_Username_Input() {
+    var username_Input_Element = document.getElementById('username-field')
+    var username_Input = username_Input_Element.value
+    return username_Input
+}
+
+// get password input
+function get_Password_Input() {
+    var password_Input_Element = document.getElementById('password-field')
+    var password_Input = password_Input_Element.value
+    return password_Input
+}
+
 // submit_Button_Pressed function
 function submit_Button_Pressed() {
     // hide invalid messages
     resetUserPassInvalidMessage()
 
     // get username input
-    var username_Input_Element = document.getElementById('username-field')
-    var username_Input = username_Input_Element.value
+    username_Input = get_Username_Input()
 
     // get password input
-    var password_Input_Element = document.getElementById('password-field')
-    var password_Input = password_Input_Element.value
+    password_Input = get_Password_Input()
 
     // check if user entered valid username
     var validUserName = checkIfUsernameValid(username_Input)
