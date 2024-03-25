@@ -40,18 +40,22 @@ function resetUserPassInvalidMessage() {
     var password_Invalid_Text = document.getElementById('password-invalid-text')
     username_Invalid_Text.style.color = 'rgba(0,0,0,0)'
     password_Invalid_Text.style.color = 'rgba(0,0,0,0)'
+    username_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
+    password_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0)'
 }
 
 // password invalid message
 function passwordInvalidMessage() {
     var password_Invalid_Text = document.getElementById('password-invalid-text')
     password_Invalid_Text.style.color = '#F93943'
+    password_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
 }
 
 // username invalid message
 function usernameInvalidMessage() {
     var username_Invalid_Text = document.getElementById('username-invalid-text')
     username_Invalid_Text.style.color = '#F93943'
+    username_Invalid_Text.style.textShadow = '1px 1px 1px rgba(0,0,0,0.2)'
 }
 
 // submit_Button_Pressed function
