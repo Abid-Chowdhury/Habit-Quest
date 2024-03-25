@@ -155,6 +155,15 @@ body {
             font-weight: 500;
             margin-top: 5px;
             margin-bottom: 5px;
+            display: none;
+        }
+
+        .invalidTextBox {
+            height: 30px;
+        }
+
+        #wrongUserOrPassText {
+            color: red;
         }
 
         a {

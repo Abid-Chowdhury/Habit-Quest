@@ -96,13 +96,17 @@ function passwordCorrectCheck(passwordInput) {
     return false
 }
 
-
 // check if username and password is correct
 function checkIfUserAndPassCorrect(usernameInput, passwordInput) {
     if (usernameCorrectCheck(usernameInput) && passwordCorrectCheck(passwordInput)) {
         return true
     } 
     return false
+}
+
+// wrong username and password error message
+function wrongUsernameAndPasswordMessage() {
+    
 }
 
 // submitButtonPressed function
@@ -129,14 +133,8 @@ function submitButtonPressed() {
         if (checkIfUserAndPassCorrect(usernameInput, passwordInput)) {
             redirectToHomePage()
         } else {
-            console.log('wrong user and pass')
-        }
-        
-        // update username in local storage
-        // updateUsernameInLocalStorage(usernameInput)
-
-        // update password in local storage
-        // updatePasswordInLocalStorage(passwordInput)
+            wrongUsernameAndPasswordMessage()
+        }     
 
     // else show invalid username and/or invalid password message
     } else {

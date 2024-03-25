@@ -21,9 +21,14 @@
             <hr>
             
             <input type="text" id="usernameField" placeholder="Username" maxlength="30">
-            <p id="usernameInvalidText">Username must be 4 characters or longer!</p>
+            <div class="invalidTextBox">
+                <p id="usernameInvalidText">Username must be 4 characters or longer!</p>
+            </div>
             <input type="password" id="passwordField" placeholder="Password" maxlength="30">
-            <p id="passwordInvalidText">Password must be 4 characters or longer!</p>
+            <div class="invalidTextBox">
+                <p id="passwordInvalidText">Password must be 4 characters or longer!</p>
+                <p id="wrongUserOrPassText">Wrong username or password!</p>
+            </div>
             
             <input type="submit" value="Log In" onclick="submitButtonPressed()">
             <a href="..\sign_Up_Page\index.html">Sign Up</a>
