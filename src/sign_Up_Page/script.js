@@ -71,6 +71,16 @@ function get_Password_Input() {
     return password_Input
 }
 
+// update username in local storage function
+function update_Username_In_Local_Storage(username_Input) {
+    localStorage.setItem('username', username_Input)
+}
+
+// update password in local storage function
+function update_Password_In_Local_Storage(password_Input) {
+    localStorage.setItem('password', password_Input)
+}
+
 // submit_Button_Pressed function
 function submit_Button_Pressed() {
     // hide invalid messages
@@ -92,10 +102,11 @@ function submit_Button_Pressed() {
         redirectToHomePage()
         
         // update username in local storage
-        localStorage.setItem('username', username_Input)
+        update_Username_In_Local_Storage(username_Input)
 
         // update password in local storage
-        localStorage.setItem('password', password_Input)
+        update_Password_In_Local_Storage(password_Input)
+
     } else {
         if (!validUserName) {
             usernameInvalidMessage()
