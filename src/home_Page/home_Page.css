@@ -21,12 +21,11 @@
 
 
 
-* {
-    box-sizing: border-box;
-  }
+ 
   body {
     font-size: 14px;
     background-color:var(--blackh);
+    padding:10px;
   }
   /*Likely Redundant*/
   
@@ -86,6 +85,7 @@
     
 
   }
+  /*
     .calendarBox {
     width: 300px;
     height: 300px;
@@ -98,9 +98,14 @@
     
     overflow: hidden;
   }
-
+*/
  
-
+  .h3{
+    height: 50px;
+    width: 400px;
+    top:50px;
+    color:var(--yellowh);
+  }
   /*Habit Quest Sign*/
 
   /*Main Banner*/
@@ -269,26 +274,6 @@
   }
   
 
-  .fireImage {
-    width: 32px;
-    height: 34px;
-    background: url("../Assets/Symbols/FireNoBG.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 46px;
-    left: 1010px;
-    overflow: hidden;
-  }
-
-  .dailyStreak{
-    position:relative;
-    font-family:Rum Raisin;
-    font-size:30px;
-    display:flex;
-    color:var(--yellowh);
-    left: 60px;
-    top:25px;
-  }
+  
+  
+  
