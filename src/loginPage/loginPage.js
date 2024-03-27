@@ -14,44 +14,10 @@ input.addEventListener('input', function() {
     }
 })
 
-// check if user entered a valid username
-function checkIfUsernameValid(usernameInput) {
-    if (usernameInput.length >= 4) {
-        return true
-    } else {
-        return false
-    }
-}
-
-// check if user entered a valid password
-function checkIfPasswordValid(passwordInput) {
-    if (passwordInput.length >= 4) {
-        return true
-    } else {
-        return false
-    }
-}
-
 // reset username/password invalid messages
-function resetUserPassInvalidMessage() {
-    var usernameInvalidText = document.getElementById('usernameInvalidText')
-    var passwordInvalidText = document.getElementById('passwordInvalidText')
+function resetUserPassWrongMessage() {
     var wrongUserOrPassText = document.getElementById('wrongUserOrPassText')
-    usernameInvalidText.style.display = 'none'
-    passwordInvalidText.style.display = 'none'
     wrongUserOrPassText.style.display = 'none'
-}
-
-// password invalid message
-function passwordInvalidMessage() {
-    var passwordInvalidText = document.getElementById('passwordInvalidText')
-    passwordInvalidText.style.display = 'block'
-}
-
-// username invalid message
-function usernameInvalidMessage() {
-    var usernameInvalidText = document.getElementById('usernameInvalidText')
-    usernameInvalidText.style.display = 'block'
 }
 
 // get username input
@@ -66,16 +32,6 @@ function getPasswordInput() {
     var passwordInputElement = document.getElementById('passwordField')
     var passwordInput = passwordInputElement.value
     return passwordInput
-}
-
-// update username in local storage function
-function updateUsernameInLocalStorage(usernameInput) {
-    localStorage.setItem('username', usernameInput)
-}
-
-// update password in local storage function
-function updatePasswordInLocalStorage(passwordInput) {
-    localStorage.setItem('password', passwordInput)
 }
 
 // check if username is correct
@@ -123,7 +79,7 @@ document.addEventListener('keydown', (event) => {
 // submitButtonPressed function
 function submitButtonPressed() {
     // hide invalid messages
-    resetUserPassInvalidMessage()
+    resetUserPassWrongMessage()
 
     // get username input
     var usernameInput = getUsernameInput()
@@ -131,30 +87,13 @@ function submitButtonPressed() {
     // get password input
     var passwordInput = getPasswordInput()
 
-    // check if user entered valid username
-    var validUserName = checkIfUsernameValid(usernameInput)
-
-    // check if user entered valid password
-    var validPassword = checkIfPasswordValid(passwordInput)
-
-    // if username and passwords are valid, check if user and pass match localstorage
+    // check if user and pass match localstorage
     // if match -> redirect to home page
     // else show wrong user or pass message
-    if (validUserName && validPassword) {
-        if (checkIfUserAndPassCorrect(usernameInput, passwordInput)) {
-            redirectToHomePage()
-        } else {
-            wrongUsernameAndPasswordMessage()
-        }     
-
-    // else show invalid username and/or invalid password message
+    if (checkIfUserAndPassCorrect(usernameInput, passwordInput)) {
+        redirectToHomePage()
     } else {
-        if (!validUserName) {
-            usernameInvalidMessage()
-        }
-        if (!validPassword) {
-            // passwordInvalidMessage()
-        }
+        wrongUsernameAndPasswordMessage()
     }
 }
 
