@@ -67,7 +67,21 @@
     
   }
   
+  .profileSidebar{
+    width:200px;
+    height:100%;
+    background-color: var(--yellowh);
+    position:fixed;
+    left:-200px;
+  }
+
+  .profileSidebar.show{
+    left:0;
+  }
   
+  .content{
+    padding: 20px;
+  }
 
   .words{
     color:var(--whiteh);
