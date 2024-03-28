@@ -57,7 +57,18 @@
     /* Add any other styles you want to apply to the buttons */
   }
   
+  .profilePicture{
+    width:100px;
+    height:100px;
+    background-image:url(../Assets/Symbols/PorscheCircleNoBG.png);
+    background-size:cover;
+    cursor:pointer;
+    position:relative;
+    
+  }
   
+  
+
   .words{
     color:var(--whiteh);
     font-family:Inter;
