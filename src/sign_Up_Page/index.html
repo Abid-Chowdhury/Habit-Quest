@@ -9,18 +9,24 @@
 </head>
 <body>
     
-    <div id="left-side">
+    <div id="leftSide">
         <h1>Habit Quest</h1>
         <h2>Level Up Your Life</h2>
         <h2>One Habit at a Time</h2>
     </div>
 
-    <div id="right-side">
-        <div id="inner-box">
+    <div id="rightSide">
+        <div id="innerBox">
             <h3>Sign Up</h3>
             <hr>
-            <input type="text" id="username-field" placeholder="Username" maxlength="30">
-            <input type="submit" value="Start" onclick="submit_Button_Pressed()">
+            
+            <input type="text" id="usernameField" placeholder="Username" maxlength="30">
+            <p id="usernameInvalidText">Username must be 4 characters or longer!</p>
+            <input type="password" id="passwordField" placeholder="Password" maxlength="30">
+            <p id="passwordInvalidText">Password must be 4 characters or longer!</p>
+            
+            <input type="submit" value="Sign Up" onclick="submitButtonPressed()">
+            <a href="..\loginPage\loginPage.html">Log In</a>
         </div>
     </div>
 

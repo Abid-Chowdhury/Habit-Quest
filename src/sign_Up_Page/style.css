@@ -34,7 +34,6 @@ font-variation-settings:
     --greenr: rgba(156, 222, 159, 255);
 }
 
-
 body {
     background-image: url('../Assets/Backgrounds/background.jpg');
     background-color: var(--blackh);
@@ -52,7 +51,7 @@ body {
     "slnt" 0;
 }
 
-#left-side {
+#leftSide {
     width: 60%;
     color: var(--whiteh);
     text-align: center;
@@ -76,11 +75,11 @@ body {
     }
 }
 
-#right-side {
+#rightSide {
     width: 40%;
     color: var(--blueh);
 
-    & #inner-box {
+    & #innerBox {
         background-color: rgba(240, 247, 244, .75);
         padding-left: 50px;
         padding-right: 50px;
@@ -89,8 +88,10 @@ body {
         flex-direction: column;
         height: 100vh;
         flex-grow: 1;
+        align-items: center;
 
         h3 {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
             text-align: center;
             margin: 0;
             margin-top: 200px;
@@ -105,16 +106,17 @@ body {
             border-radius: 20px;
             border: none;
             background-color: var(--blueh);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         input {
-            margin-bottom: 20px;
             border: none;
             height: 50px;
             border-radius: 9px;
             font-size: 20px;
             padding-left: 20px;
             padding-right: 20px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         input:focus {
@@ -122,6 +124,7 @@ body {
         }
 
         input[type="submit"] {
+            margin-bottom: 20px;
             color: white;
             cursor: pointer;
             padding-left: 33px;
@@ -143,6 +146,23 @@ body {
         input[type="submit"]:active {
             transform: scale(0.97);
             box-shadow: 7px 5px 56px -10px rgb(50,150,255);
+        }
+
+        p {
+            color: rgba(0,0,0,0);
+            user-select: none;
+            font-weight: 500;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: var(--blueh);
+            font-weight: 600;
+            width: 20%;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
         }
 
     }
