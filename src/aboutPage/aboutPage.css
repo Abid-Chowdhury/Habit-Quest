@@ -51,3 +51,8 @@ body {
     "slnt" 0;
 }
 
+.main-body {
+    height: 50%;
+    width: 50%;
+    background-color: red;
+}
