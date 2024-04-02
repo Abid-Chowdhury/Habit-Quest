@@ -5,7 +5,7 @@ const dateElement = document.querySelector(".date");
  * @param {Date} date
  */
 function timeFormat(date) {
-  const hours = date.getHours() % 12 || 12;
+    const hours = date.getHours() % 12 || 12;
   const minutes = date.getMinutes();
   const isAm = date.getHours() < 12;
 

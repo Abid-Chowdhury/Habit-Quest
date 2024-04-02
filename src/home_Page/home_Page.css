@@ -29,10 +29,25 @@
     background-color:var(--blackh);
     height: 100vh;
     
+    overflow: hidden;
     padding:10px;
   }
   /*Likely Redundant*/
   
+.background-image {
+  background-image: url('../Assets/Backgrounds/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(3px);
+  }
+
   header{
   
     color: var(--whiteh);
