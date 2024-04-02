@@ -27,7 +27,7 @@
   body {
     font-size: 14px;
     background-color:var(--blackh);
-    
+    height: 100vh;
     
     padding:10px;
   }
