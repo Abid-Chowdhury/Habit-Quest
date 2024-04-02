@@ -81,10 +81,23 @@
 
   .profileSidebar.show{
     right:1px;
+    color:var(--blueh);
   }
   
-  .profileSidebar.hide{
-    right:0px;
+ 
+
+  .sidebarChoices{
+    z-index:1;
+    padding:0;
+    margin:0;
+    position:relative;
+  }
+
+  .option{
+    padding:10px;
+    cursor:pointer;
+    z-index:1;
+    color:var(--blackh);
   }
   .content{
     padding: 20px;

@@ -61,6 +61,3 @@ profileButton.addEventListener('click',function(){
   profileSidebar.classList.toggle("show")
 });
 
-profileButton.addEventListener('click',function(){
-  profileSidebar.classList.toggle("hide")
-});
