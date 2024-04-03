@@ -1,0 +1,369 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rum+Raisin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter');
+:root{
+    --blackh: #0C0C14;
+    --blackr: rgba(12, 12, 20, 255);
+
+    --whiteh: #F0F7F4;
+    --whiter: rgba(240, 247, 244, 255);
+
+    --blueh: #279AF1;
+    --bluer: rgba(39, 154, 241, 255);
+
+    --redh: #F93943;
+    --redr: rgba(249, 57, 67, 255);
+
+    --greenh: #9CDE9F;
+    --greenr: rgba(156, 222, 159, 255);
+
+    --yellowh: #ffdf00;
+  }
+
+
+
+
+ 
+  body {
+    font-size: 14px;
+    background-color:var(--blackh);
+    height: 100vh;
+    
+    overflow: hidden;
+    padding:10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  /*Likely Redundant*/
+  
+.background-image {
+  background-image: url('../Assets/Backgrounds/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(3px);
+  }
+
+  header{
+  
+    color: var(--whiteh);
+    font-family:  Rum Raisin;
+    font-size: 25px;
+    width: 100%;
+    height: 70px;
+    display: flex; 
+    align-items: center;
+  }
+  header button {
+    margin-left: 50px;
+    color:var(--whiteh);
+    background-color: transparent;
+    font-family: Inter;
+    font-size: 25px;
+    text-align: center;
+    z-index: 3;
+    padding:0;
+    border:0;
+    cursor: pointer;
+    /* Add any other styles you want to apply to the buttons */
+  }
+  
+  .profilePicture{
+    width:100px;
+    height:100px;
+    background-image:url(../Assets/Symbols/PorscheCircleNoBG.png);
+    background-size:cover;
+    cursor:pointer;
+    position:relative;
+    
+  }
+  
+
+  .profileSidebar{
+    width:200px;
+    height:200%;
+    overflow-y: auto;
+    background-color: var(--yellowh);
+    position:fixed;
+    right:-200px;
+    z-index: 2;
+    transition: right 0.3s ease;
+  }
+
+  .profileSidebar.show{
+    right:1px;
+    color:var(--blueh);
+  }
+  
+ 
+
+  .sidebarChoices{
+    z-index:1;
+    padding:0;
+    margin:0;
+    position:relative;
+  }
+
+  .option{
+    padding:10px;
+    cursor:pointer;
+    z-index:1;
+    color:var(--blackh);
+  }
+  .content{
+    padding: 20px;
+  }
+
+  .words{
+    color:var(--whiteh);
+    font-family:Inter;
+    font-size: 30px;
+    
+  }
+  .bottomRowWords{
+    display:flex;
+    justify-content: space-between ;
+    position:relative;
+    top:300px;
+    color:var(--yellowh);
+    color:var(--whiteh);
+    color:var(--yellowh);
+    font-family:Inter;
+    font-size: 30px;
+  }
+
+  .bottomRow{
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+    top:350px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+  }
+  .taskBox{
+    width: 272px;
+    height: 421px;
+    background: var(--whiteh);
+    opacity: 1;
+    align-items: center;
+    top:376px;
+    overflow: hidden;
+    font-family: Inter;
+    font-size:40px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  }
+  /*
+    .calendarBox {
+    width: 300px;
+    height: 300px;
+    background: var(--whiteh);
+    
+    opacity: 1;
+    
+    align-items: center;
+    top: 375px;
+    
+    overflow: hidden;
+  }
+*/
+ 
+
+  /*Habit Quest Sign*/
+
+  /*Main Banner*/
+  .mainBanner {
+    width: 100%;
+    height: 194px;
+    background: var(--blueh);
+    opacity: 1;
+    position: absolute;
+    top: 105px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    
+  }
+  .dateTime{
+    font-family: Inter;
+    color:var(--whiteh);
+    font-size: 40px;
+    position:absolute;
+    right:700px;
+    top:50px;
+    
+  }
+  .date{
+    font-size:50px;
+  }
+  .time{
+    color:var(--blackh);
+  }
+ 
+  .streak{
+    display:flex;
+    color:var(--yellowh); 
+    margin-top:10px;
+    margin-left:550px;
+    
+   
+  }
+  .streak img{
+    margin-top:30px;
+    margin-left:30px;
+  }
+  
+ 
+ 
+  /* Damage Bar*/
+  .power {
+    width: 77px;
+    color: var(--yellowh);
+    position: absolute;
+    top: 100px;
+    left: 243px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .mainCharacterImage {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/BlueHairHeroine1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
+  /* Daily Quest Task List */
+
+  /* Weekly Quests*/
+
+
+
+
+  .coinImage {
+    width: 45px;
+    height: 42px;
+    background: url("../Assets/Symbols/CoinNoBG.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 42px;
+    left: 750px;
+    overflow: hidden;
+  }
+
+   /*Main Character Circle */
+  .mainCharacterFiller {
+    width: 181px;
+    height: 167px;
+    background: var(--whiteh);
+    top: 25px;
+    opacity: 1;
+    position: absolute;
+    
+    left: 3px;
+    border-radius: 50%;
+  }
+  /*Shop Sign */
+
+
+
+
+  .profileFiller {
+    width: 81px;
+    height: 81px;
+    background: var(--whiteh);
+    opacity: 1;
+    position: absolute;
+    top: 13px;
+    left: 1250px;
+    border-radius: 50%;
+  }
+  
+
+  .coinImage {
+    width: 32px;
+    height: 34px;
+    background: url("../Assets/Symbols/CoinNoBG.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 46px;
+    left: 1100px;
+    overflow: hidden;
+  }
+  .coinBalance {
+    width: 39px;
+    color: var(--whiteh);
+    position: absolute;
+    top: 44px;
+    left: 1150px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .heartImage {
+    width: 38px;
+    height: 28px;
+    background: url("../Assets/Symbols/RedHeartNoBG.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 65px;
+    left: 197px;
+    overflow: hidden;
+  }
+  .heartNumbers {
+    width: 77px;
+    color: var(--redh);
+    position: absolute;
+    top: 55px;
+    left: 243px;
+    font-family: Rum Raisin;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  .swordImage {
+    width: 129px;
+    height: 52px;
+    background: url("../Assets/Symbols/GoldenSwordNoBG.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 100px;
+    left: 147px;
+    overflow: hidden;
+  }
+  
+
+  
+  
+  
