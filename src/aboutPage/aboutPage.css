@@ -62,6 +62,6 @@ body {
 .main-body-background {
     height: 70vh;
     width: 70vw;
-    background-color: red;
+    background-color: rgba(240, 247, 244, .75);
  
 }
