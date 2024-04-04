@@ -69,6 +69,15 @@ body {
     .left-side {
         width: 65%;
         padding: 5%;
+
+        h1 {
+            color: var(--blueh);
+            font-size: 3vw;
+        }
+
+        p {
+            font-size: 1.2vw;
+        }
     }
 
     .right-side {
