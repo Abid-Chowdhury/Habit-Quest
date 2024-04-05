@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Rum+Raisin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter');
+:root{
+    --blackh: #0C0C14;
+    --blackr: rgba(12, 12, 20, 255);
+
+    --whiteh: #F0F7F4;
+    --whiter: rgba(240, 247, 244, 255);
+
+    --blueh: #279AF1;
+    --bluer: rgba(39, 154, 241, 255);
+
+    --redh: #F93943;
+    --redr: rgba(249, 57, 67, 255);
+
+    --greenh: #9CDE9F;
+    --greenr: rgba(156, 222, 159, 255);
+
+    --yellowh: #ffdf00;
+  }
+
+   
+  body {
+    font-size: 14px;
+    background-color:var(--blackh);
+    height: 100vh;
+    
+    overflow: hidden;
+    padding:10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .background-image {
+    background-image: url("../Assets/Backgrounds/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(3px);
+    }
