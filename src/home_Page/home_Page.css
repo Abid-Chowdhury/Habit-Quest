@@ -54,6 +54,8 @@ header {
 	color: var(--whiteh);
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 
 	.left-side {
 		width: 25%;
@@ -80,9 +82,10 @@ header {
 
 	.right-side {
 		width: 25%;
-
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		img {
 			width: 20%;
 			height: 20%;
@@ -253,7 +256,7 @@ header {
     color:var(--blackh);
   }
  
-  .streak{
+  /* .streak{
     display:flex;
     color:var(--yellowh); 
     margin-top:10px;
@@ -264,7 +267,7 @@ header {
   .streak img{
     margin-top:30px;
     margin-left:30px;
-  }
+  } */
   
  
  
