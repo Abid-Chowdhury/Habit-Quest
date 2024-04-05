@@ -44,3 +44,34 @@
     z-index: -1;
     filter: blur(3px);
     }
+
+
+    .container_Box{
+        
+        width: 500px;
+        height: 750px;
+        background: var(--whiteh);
+        position:relative;
+        top:100px;
+        left:650px;
+        font-family: Inter;
+        font-size:40px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        border:1px;
+        justify-content:space-between;
+      }
+      .text_Box{
+        
+        width: 400px;
+        height: 100px;
+        background: var(--blueh);
+        position:relative;
+        top:100px;
+        left: 100px;
+        margin-top: 50px;
+        font-family: Inter;
+        font-size:40px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        border:1px;
+    
+      }
