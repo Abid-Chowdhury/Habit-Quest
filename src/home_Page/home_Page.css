@@ -60,6 +60,7 @@ header {
 		
 		h1 {
 			font-size: 4em;
+			margin: 0;
 		}
 	}
 
@@ -78,9 +79,11 @@ header {
 		img {
 			width: 20%;
 			height: 20%;
+			margin: 0;
 		}
 		p {
 			font-size: 2em;
+			margin: 0;
 		}
 	}
 }
