@@ -59,6 +59,8 @@ header {
 
 	.left-side {
 		width: 25%;
+		justify-content: left;
+		align-items: center;
 		
 		h1 {
 			font-size: 4em;
@@ -84,12 +86,26 @@ header {
 		width: 25%;
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: right;
 		align-items: center;
-		img {
+		
+		div {
 			width: 20%;
-			height: 20%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-left: 10px;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		
+		img {
+			width: 2.5vw;
+			height: 2.5vw;
 			margin: 0;
+			margin-left: 5px;
+			margin-right: 5px;
 		}
 		p {
 			font-size: 2em;
