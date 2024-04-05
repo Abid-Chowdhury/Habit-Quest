@@ -60,3 +60,4 @@ const profileSidebar = document.getElementById("profileSidebar");
 profileButton.addEventListener('click',function(){
   profileSidebar.classList.toggle("show")
 });
+
