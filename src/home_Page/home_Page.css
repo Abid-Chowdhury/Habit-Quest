@@ -61,13 +61,20 @@ header {
 		h1 {
 			font-size: 4em;
 			margin: 0;
+			cursor: pointer;
 		}
 	}
 
 	.middle-side {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 50%;
 		a {
 			font-size: 3em;
+			margin-left: 10px;
+			margin-right: 10px;
+			cursor: pointer;
 		}
 	}
 
