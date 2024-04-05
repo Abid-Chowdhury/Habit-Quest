@@ -24,7 +24,6 @@
     font-size: 14px;
     background-color:var(--blackh);
     height: 100vh;
-    
     overflow: hidden;
     padding:10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -47,31 +46,49 @@
 
 
     .container_Box{
-        
-        width: 500px;
+
+        display:flex;
+        flex-direction: column;
+        width: 800px;
         height: 750px;
-        background: var(--whiteh);
         position:relative;
-        top:100px;
-        left:650px;
+        color:var(--whiteh);
+        left:550px;
+        top:50px;
         font-family: Inter;
         font-size:40px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         border:1px;
         justify-content:space-between;
-      }
+    }
       .text_Box{
         
-        width: 400px;
+        width: 100%;
         height: 100px;
-        background: var(--blueh);
         position:relative;
-        top:100px;
-        left: 100px;
         margin-top: 50px;
         font-family: Inter;
         font-size:40px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         border:1px;
     
+      }
+
+      .word_Box{
+        color:var(--whiteh);
+        font-family:Inter;
+        font-size: 30px;
+            
+          
+      }
+
+      .word_Field{
+        width: 400px;
+        height: 100px;
+        background: var(--whiteh);
+        font-family: Inter;
+        font-size: 40px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        border: 1px solid black; /* Specify the border */
+        position: relative;
+        left: 175px;
+        bottom: 36px;
       }
