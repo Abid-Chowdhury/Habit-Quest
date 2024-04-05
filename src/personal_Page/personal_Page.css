@@ -59,6 +59,7 @@
         font-size:40px;
         border:1px;
         justify-content:space-between;
+      
     }
       .text_Box{
         
@@ -76,6 +77,7 @@
         color:var(--whiteh);
         font-family:Inter;
         font-size: 30px;
+        width:500px;
             
           
       }
@@ -87,8 +89,28 @@
         font-family: Inter;
         font-size: 40px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        border: 1px solid black; /* Specify the border */
+        border: 1px solid black; 
         position: relative;
         left: 175px;
         bottom: 36px;
       }
+
+      .exit_Button{
+        color:var(--blueh);
+        width:50px;
+        height: 50px;
+        position:relative;
+        bottom:45px;
+        left:600px;
+        background-color: var(--blueh);
+        cursor: pointer;
+      }
+      /**
+      .save_Button{
+        color:var(--blackh);
+        width:50px;
+        height: 50px;
+        cursor:pointer;
+        position:relative; 
+    }
+    */
