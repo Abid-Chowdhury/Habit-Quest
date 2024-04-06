@@ -88,16 +88,16 @@
   .profileSidebar{
     width:200px;
     height:200%;
-    overflow-y: auto;
     background-color: var(--yellowh);
     position:fixed;
+    top:0;
     right:-200px;
     z-index: 2;
     transition: right 0.3s ease;
   }
 
   .profileSidebar.show{
-    right:1px;
+    right:0;
     color:var(--blueh);
   }
   
