@@ -38,7 +38,8 @@ font-variation-settings:
   body {
     font-size: 14px;
     background-color:var(--blackh);
-    height: 100vh;
+    
+    
     overflow: hidden;
     padding:10px;
   }
@@ -59,7 +60,7 @@ font-variation-settings:
 
 .main-body {
     width: 100vw;
-    height: 85%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
