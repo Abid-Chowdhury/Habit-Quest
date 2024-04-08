@@ -118,72 +118,32 @@ header {
 		}
 	}
 }
+.profileSidebar{
+  width:200px;
+  height:200%;
+  background-color: var(--yellowh);
+  position:fixed;
+  top:0;
+  right:-600px;
+  z-index: 0;
+  transition: right 0.3s ease;
+}
+#profileButton{
+  position:relative;
+  z-index:1;
+}
+.profileSidebar.show{
+  right:0;
+  color:var(--blueh);
+}
+.sidebarChoices{
+  z-index:1;
+  padding:0;
+  margin:0;
+  position:relative;
+}
 
-  /* header{
-  
-    color: var(--whiteh);
-    font-family:  Rum Raisin;
-    font-size: 25px;
-    width: 100%;
-    height: 70px;
-    display: flex; 
-    align-items: center;
-  }
-  header button {
-    margin-left: 50px;
-    color:var(--whiteh);
-    background-color: transparent;
-    font-family: Inter;
-    font-size: 25px;
-    text-align: center;
-    z-index: 3;
-    padding:0;
-    border:0;
-    cursor: pointer;
-  }
-  
-  .profilePicture{
-    width:100px;
-    height:100px;
-    background-image:url(../Assets/Symbols/PorscheCircleNoBG.png);
-    background-size:cover;
-    cursor:pointer;
-    position:relative;
-    
-  }
-  
 
-  .profileSidebar{
-    width:200px;
-    height:200%;
-    background-color: var(--yellowh);
-    position:fixed;
-    top:0;
-    right:-200px;
-    z-index: 2;
-    transition: right 0.3s ease;
-  }
-
-  .profileSidebar.show{
-    right:0;
-    color:var(--blueh);
-  }
-  
- 
-
-  .sidebarChoices{
-    z-index:1;
-    padding:0;
-    margin:0;
-    position:relative;
-  }
-
-  .option{
-    padding:10px;
-    cursor:pointer;
-    z-index:1;
-    color:var(--blackh);
-  } */
   .content{
     padding: 20px;
   }
