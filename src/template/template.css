@@ -34,14 +34,13 @@ font-variation-settings:
     --greenr: rgba(156, 222, 159, 255);
 }
 
- 
-  body {
+body {
     font-size: 14px;
     background-color:var(--blackh);
     height: 100vh;
     overflow: hidden;
     padding:10px;
-  }
+}
 
 .background-image {
   background-image: url('../Assets/Backgrounds/background.jpg');
@@ -55,7 +54,7 @@ font-variation-settings:
   left: 0;
   z-index: -1;
   filter: blur(3px);
-  }
+}
 
 .main-body {
     width: 100vw;
@@ -66,6 +65,7 @@ font-variation-settings:
     flex-direction: column;
 }
 
+/* Optional Header CSS */
 header {
 	color: var(--whiteh);
 	display: flex;
