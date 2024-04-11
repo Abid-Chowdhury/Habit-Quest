@@ -109,9 +109,16 @@ body {
             width: 50%;
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            height: 90vh;
             flex-grow: 1;
             align-items: center;
+
+            background: rgba(12, 12, 20, 0.25);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.2px);
+            -webkit-backdrop-filter: blur(5.2px);
+            border: 1px solid rgba(240, 247, 244, 0.43);
 
             h3 {
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
