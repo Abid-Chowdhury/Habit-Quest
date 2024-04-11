@@ -57,6 +57,8 @@ body {
     height: 100vh;
     overflow: hidden;
     padding:10px;
+    margin: 0;
+    padding: 0;
 }
 
 .background-image {
@@ -75,7 +77,7 @@ body {
 
 .main-body {
     width: 100vw;
-    height: 85%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +90,7 @@ body {
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 
     h1 {
         font-size: 160px;
@@ -97,6 +99,7 @@ body {
         font-weight: 400;
         font-style: normal;
         margin-bottom: 0;
+        margin-top: 0;
     }
 
     h2 {
