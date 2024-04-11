@@ -34,7 +34,7 @@ font-variation-settings:
     --greenr: rgba(156, 222, 159, 255);
 }
 
-/* body {
+body {
     background-image: url('../Assets/Backgrounds/background.jpg');
     background-color: var(--blackh);
     background-repeat: no-repeat;
@@ -49,16 +49,6 @@ font-variation-settings:
     font-style: normal;
     font-variation-settings:
     "slnt" 0;
-} */
-
-body {
-    font-size: 14px;
-    background-color:var(--blackh);
-    height: 100vh;
-    overflow: hidden;
-    padding:10px;
-    margin: 0;
-    padding: 0;
 }
 
 .background-image {
