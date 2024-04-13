@@ -130,8 +130,8 @@ header {
 }
 .profileSidebar{
   width:200px;
-  height:200%;
-  background-color: var(--yellowh);
+  height:1000%;
+  background-color: var(--darkGreeneh);
   position:fixed;
   top:0;
   right:-600px;
@@ -144,7 +144,7 @@ header {
 }
 .profileSidebar.show{
   right:0;
-  color:var(--blueh);
+
 }
 .sidebarChoices{
   z-index:1;
@@ -221,7 +221,7 @@ header {
     width: 100%;
     height: 194px;
     background: var(--darkGreenr);
-    
+    z-index:0;
     position: absolute;
     top: 105px;
     left: 0px;
