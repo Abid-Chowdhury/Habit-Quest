@@ -18,6 +18,16 @@
     --greenr: rgba(156, 222, 159, 255);
 
     --yellowh: #ffdf00;
+
+    --darkGreeneh: #062726;
+    --darkGreenr: rgba(6, 39, 38, 0.8);
+    
+    --lightGreeneh: #136F63;
+    --lightGreener: rgba(19, 111, 99, 0.5);
+
+    --greenblueh: #0CA4A5;
+    --greenBluer: rgba(12, 164, 165, 0.5);
+
   }
 
  
@@ -178,12 +188,12 @@ header {
   .taskBox{
     width: 272px;
     height: 421px;
-    background: var(--whiteh);
-    opacity: 1;
+    background: var(--darkGreenr);
     align-items: center;
     top:376px;
     overflow: hidden;
     font-family: Inter;
+    color:var(--whiteh);
     font-size:40px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
@@ -210,14 +220,15 @@ header {
   .mainBanner {
     width: 100%;
     height: 194px;
-    background: var(--blueh);
-    opacity: 1;
+    background: var(--darkGreenr);
+    
     position: absolute;
     top: 105px;
     left: 0px;
     border: 1px solid rgba(0,0,0,1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    
     
   }
   .dateTime{
@@ -299,10 +310,10 @@ header {
   }
 
    /*Main Character Circle */
-  .mainCharacterFiller {
+  .characterFiller {
     width: 181px;
     height: 167px;
-    background: var(--whiteh);
+    background: var(--greenBluer);
     top: 25px;
     opacity: 1;
     position: absolute;
