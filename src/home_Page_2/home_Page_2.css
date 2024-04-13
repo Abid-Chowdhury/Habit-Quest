@@ -236,7 +236,7 @@ header {
     color:var(--whiteh);
     font-size: 30px;
     position:absolute;
-    right:700px;
+    right:300px;
     top:50px;
     
   }
@@ -290,6 +290,61 @@ header {
     left: 30px;
     overflow: hidden;
   }
+
+  .partyCharacter1 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/Heroin2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
+
+  
+  .partyCharacter2 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/Heroine3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
+  .partyCharacter3 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/Heroine4.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
+  .partyCharacter4 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/MainCharacter1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
   /* Daily Quest Task List */
 
   /* Weekly Quests*/
@@ -316,7 +371,7 @@ header {
     width: 181px;
     height: 167px;
     background: var(--greenBluer);
-    top: 25px;
+    top:10px;
     opacity: 1;
     position: absolute;
     
