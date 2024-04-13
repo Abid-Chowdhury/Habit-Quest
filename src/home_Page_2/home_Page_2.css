@@ -234,17 +234,19 @@ header {
   .dateTime{
     font-family: Inter;
     color:var(--whiteh);
-    font-size: 40px;
+    font-size: 30px;
     position:absolute;
     right:700px;
     top:50px;
     
   }
   .date{
-    font-size:50px;
+    color:var(--whiteh);
+    font-size:120%;
   }
   .time{
-    color:var(--blackh);
+    color:var(--whiteh);
+    font-size:80%;
   }
  
   /* .streak{
