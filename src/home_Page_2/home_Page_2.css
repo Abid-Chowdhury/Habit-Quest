@@ -199,6 +199,22 @@ header {
     border-radius:10px;
 
   }
+  .searchBar{
+    height:50px;
+    width:200px;
+    background:var(--whiteh);
+    border-radius:10px;
+    color:var(--blackh);
+    font-size:30px;
+  }
+  .searchField{
+    height:50px;
+    width:200px;
+    background:var(--whiteh);
+    border-radius:10px;
+    color:var(--blackh);
+    font-size:30px;
+  }
   /*
     .calendarBox {
     width: 300px;
