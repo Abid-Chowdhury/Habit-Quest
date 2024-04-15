@@ -186,7 +186,7 @@ header {
     
   }
   .taskBox{
-    width: 272px;
+    width: 300px;
     height: 421px;
     background: var(--darkGreenr);
     align-items: center;
@@ -214,6 +214,14 @@ header {
     border-radius:10px;
     color:var(--blackh);
     font-size:30px;
+  }
+  .check_Box{
+    background:var(--whiteh);
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    z-index: inherit;
+    border-radius:10px;
   }
   /*
     .calendarBox {
