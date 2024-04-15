@@ -159,7 +159,6 @@ header {
   }
 
   .words{
-    color:var(--whiteh);
     font-family:Inter;
     font-size: 30px;
     
@@ -169,9 +168,6 @@ header {
     justify-content: space-between ;
     position:relative;
     top:300px;
-    color:var(--yellowh);
-    color:var(--whiteh);
-    color:var(--yellowh);
     font-family:Inter;
     font-size: 30px;
   }
@@ -226,14 +222,6 @@ header {
     color:var(--blackh);
     font-size:30px;
     flex-grow: 1;
-  }
-  .searchField{
-    height:50px;
-    width:200px;
-    background:var(--whiteh);
-    border-radius:10px;
-    color:var(--blackh);
-    font-size:30px;
   }
   .check_Box{
     background:var(--whiteh);
@@ -299,11 +287,9 @@ header {
     
   }
   .date{
-    color:var(--whiteh);
     font-size:120%;
   }
   .time{
-    color:var(--whiteh);
     font-size:80%;
   }
  
