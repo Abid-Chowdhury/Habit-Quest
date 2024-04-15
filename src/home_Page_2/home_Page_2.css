@@ -277,13 +277,19 @@ header {
     
     
   }
+  /*
+  for some reason theres a bit of margin or something 
+  just needs careful observation we'll see
+  */
   .bottom_Bar{
-    background:var(--darkGreenr);
+    background:var(--greenBluer);
     width:100%;
     height:75px;
     z-index:0;
     position:absolute;
-    top:800px;
+    top:300px;
+    right:0px;
+    
   }
   .star_Image{
     width: 45px;
@@ -294,9 +300,6 @@ header {
     opacity: 1;
     position: absolute;
     overflow: hidden;
-      
-  
-  
   }
   .dateTime{
     font-family: Inter;
