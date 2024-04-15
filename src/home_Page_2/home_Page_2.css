@@ -277,6 +277,27 @@ header {
     
     
   }
+  .bottom_Bar{
+    background:var(--darkGreenr);
+    width:100%;
+    height:75px;
+    z-index:0;
+    position:absolute;
+    top:800px;
+  }
+  .star_Image{
+    width: 45px;
+    height: 42px;
+    background: url("../Assets/Symbols/star.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+      
+  
+  
+  }
   .dateTime{
     font-family: Inter;
     color:var(--whiteh);
@@ -503,6 +524,7 @@ header {
     overflow: hidden;
   }
   
+ 
 
   
   
