@@ -208,6 +208,25 @@ header {
     font-size:30px;
     flex-grow: 1;
   }
+  .add_QuestBar{
+    height:50px;
+    width:275px;
+    margin-left:10px;
+    background:var(--whiteh);
+    border-radius:10px;
+    font-size:30px;
+    flex-grow: 1;
+  }
+  .task_Bar{
+    height:50px;
+    width:200px;
+    margin-right: 10px;
+    background:var(--whiteh);
+    border-radius:10px;
+    color:var(--blackh);
+    font-size:30px;
+    flex-grow: 1;
+  }
   .searchField{
     height:50px;
     width:200px;
@@ -223,6 +242,8 @@ header {
     cursor:pointer;
     z-index: inherit;
     border-radius:10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   /*
   This is the Home page version of Personals pages text_Box
