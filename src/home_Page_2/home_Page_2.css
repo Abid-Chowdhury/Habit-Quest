@@ -289,7 +289,8 @@ header {
     position:absolute;
     top:300px;
     right:0px;
-    
+    display:flex;
+    align-items: center;
   }
   .star_Image{
     width: 45px;
@@ -300,7 +301,12 @@ header {
     opacity: 1;
     position: absolute;
     overflow: hidden;
+    left:50px;
+    margin-right:20px;
   }
+
+
+
   .dateTime{
     font-family: Inter;
     color:var(--whiteh);
