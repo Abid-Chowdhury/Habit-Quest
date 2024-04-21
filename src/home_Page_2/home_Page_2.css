@@ -144,7 +144,8 @@ header {
 }
 .profileSidebar.show{
   right:0;
-
+  position: absolute;
+  z-index: 1;
 }
 .sidebarChoices{
   z-index:1;
