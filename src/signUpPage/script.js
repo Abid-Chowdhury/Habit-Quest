@@ -120,6 +120,6 @@ function submitButtonPressed() {
 
 // redirect to home page
 function redirectToHomePage() {
-    window.location.href = '../home_Page/home_Page.html'
+    window.location.href = '../homePage/homePage.html'
 }
 

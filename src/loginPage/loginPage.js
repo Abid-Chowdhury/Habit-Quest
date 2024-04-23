@@ -66,7 +66,7 @@ function wrongUsernameAndPasswordMessage() {
 
 // redirect to home page
 function redirectToHomePage() {
-    window.location.href = '../home_Page/home_Page.html'
+    window.location.href = '../homePage/homePage.html'
 }
 
 // if enter button pressed, activate submitButtonPressed function
