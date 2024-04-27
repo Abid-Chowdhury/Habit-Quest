@@ -127,6 +127,7 @@ header {
 	}
 }
 
+/*
   .bottomRow{
     display:flex;
     justify-content: space-between;
@@ -351,6 +352,7 @@ header {
     border-radius: 50%;
   }
  
+/* 
   .heartImage {
     width: 38px;
     height: 28px;
@@ -389,9 +391,5 @@ header {
     left: 147px;
     overflow: hidden;
   }
-  
+*/ 
  
-
-  
-  
-  
