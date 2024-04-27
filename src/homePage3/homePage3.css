@@ -126,32 +126,6 @@ header {
 		}
 	}
 }
-.profileSidebar{
-  width:200px;
-  height:1000%;
-  background-color: var(--darkGreeneh);
-  position:fixed;
-  top:0;
-  right:-600px;
-  z-index: 0;
-  transition: right 0.3s ease;
-}
-#profileButton{
-  position:relative;
-  z-index:1;
-}
-.profileSidebar.show{
-  right:0;
-  position: absolute;
-  z-index: 1;
-}
-.sidebarChoices{
-  z-index:1;
-  padding:0;
-  margin:0;
-  position:relative;
-}
-
 
   .content{
     padding: 20px;
