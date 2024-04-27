@@ -127,24 +127,6 @@ header {
 	}
 }
 
-  .content{
-    padding: 20px;
-  }
-
-  .words{
-    font-family:Inter;
-    font-size: 30px;
-    
-  }
-  .bottomRowWords{
-    display:flex;
-    justify-content: space-between ;
-    position:relative;
-    top:300px;
-    font-family:Inter;
-    font-size: 30px;
-  }
-
   .bottomRow{
     display:flex;
     justify-content: space-between;
@@ -206,34 +188,13 @@ header {
     margin-left: 10px;
     margin-right: 10px;
   }
-  /*
-  This is the Home page version of Personals pages text_Box
-  so one or the other will need to be renamed, I prefer text_Box to be 
-  renamed but we'll see
-  */
+
   .item_Box{
     height:100px;
     width:100%;
     align-items: center;
     display:flex;
   }
-  /*
-    .calendarBox {
-    width: 300px;
-    height: 300px;
-    background: var(--whiteh);
-    
-    opacity: 1;
-    
-    align-items: center;
-    top: 375px;
-    
-    overflow: hidden;
-  }
-*/
- 
-
-  /*Habit Quest Sign*/
 
   /*Main Banner*/
   .mainBanner {
@@ -250,10 +211,7 @@ header {
     
     
   }
-  /*
-  for some reason theres a bit of margin or something 
-  just needs careful observation we'll see
-  */
+
   .bottom_Bar{
     background:var(--greenBluer);
     width:100%;
@@ -295,20 +253,6 @@ header {
   .time{
     font-size:80%;
   }
- 
-  /* .streak{
-    display:flex;
-    color:var(--yellowh); 
-    margin-top:10px;
-    margin-left:550px;
-    
-   
-  }
-  .streak img{
-    margin-top:30px;
-    margin-left:30px;
-  } */
-  
  
  
   /* Damage Bar*/
@@ -392,26 +336,7 @@ header {
     left: 30px;
     overflow: hidden;
   }
-  /* Daily Quest Task List */
 
-  /* Weekly Quests*/
-
-
-
-
-  .coinImage {
-    width: 45px;
-    height: 42px;
-    background: url("../Assets/Symbols/CoinNoBG.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 42px;
-    left: 750px;
-    overflow: hidden;
-  }
 
    /*Main Character Circle */
   .characterFiller {
@@ -425,48 +350,7 @@ header {
     left: 3px;
     border-radius: 50%;
   }
-  /*Shop Sign */
-
-
-
-
-  .profileFiller {
-    width: 81px;
-    height: 81px;
-    background: var(--whiteh);
-    opacity: 1;
-    position: absolute;
-    top: 13px;
-    left: 1250px;
-    border-radius: 50%;
-  }
-  
-
-  .coinImage {
-    width: 32px;
-    height: 34px;
-    background: url("../Assets/Symbols/CoinNoBG.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 46px;
-    left: 1100px;
-    overflow: hidden;
-  }
-  .coinBalance {
-    width: 39px;
-    color: var(--whiteh);
-    position: absolute;
-    top: 44px;
-    left: 1150px;
-    font-family: Rum Raisin;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
+ 
   .heartImage {
     width: 38px;
     height: 28px;
