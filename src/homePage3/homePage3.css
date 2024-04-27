@@ -28,20 +28,18 @@
     --greenblueh: #0CA4A5;
     --greenBluer: rgba(12, 164, 165, 0.5);
 
-  }
+  }     
 
- 
-  body {
-    font-size: 14px;
-    background-color:var(--blackh);
-    height: 100vh;
-    
-    overflow: hidden;
-    padding:10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  /*Likely Redundant*/
+body {
+  font-size: 14px;
+  background-color:var(--blackh);
+  height: 100vh;
+  
+  overflow: hidden;
+  padding:10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
   
 .background-image {
   background-image: url('../Assets/Backgrounds/DeerForestBG.png');
