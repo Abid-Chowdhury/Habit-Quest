@@ -132,14 +132,26 @@ header {
     background-color: var(--darkGreenr);
     border: 1px solid rgba(0,0,0,1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 200px;
+    /* height: 200px; */
     margin-top: 15px;
     border-radius: 16px;
 
     .left-side {
+        .main-character-profile-picture {
+            height: 20vh;
+            width: 20vh;
+            background-color: red;
+            margin: 15px;
+            border-radius: 50%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 80%;
+            height: 90%;
+        }
     }
-    
-    .middle-side {}
 
     .right-side {}
 
