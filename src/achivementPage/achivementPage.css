@@ -162,7 +162,7 @@ header {
   flex-wrap:wrap;
 }
   .text_Box{
-    width: 50%;
+    width: 33.3333%;
     height: 80px;
     position:relative;
     flex-direction: row;
