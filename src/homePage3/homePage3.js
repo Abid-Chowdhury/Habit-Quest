@@ -1,56 +1,45 @@
-const timeElement = document.querySelector(".time");
-const dateElement = document.querySelector(".date");
+// Update time function
+function updateClock() {
+    const now = new Date()
+    let hours = now.getHours()
+    let minutes = now.getMinutes()
+    let seconds = now.getSeconds()
+    let meridiem = 'AM'
 
-/**
- * @param {Date} date
- */
-function timeFormat(date) {
-    const hours = date.getHours() % 12 || 12;
-  const minutes = date.getMinutes();
-  const isAm = date.getHours() < 12;
+    // convert 24 hour to 12 hour format
+    if (hours > 12) {
+        hours -= 12
+    }
 
-  return `${hours.toString().padStart(2, "0")}:${minutes
-    .toString()
-    .padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
+    // add leading 0 to hours if needed
+    if (hours < 10) {
+        hours = "0" + hours
+    }
+
+    // add leading 0 to minutes if needed
+    if (minutes < 10) {
+        minutes = "0" + minutes
+    }
+
+    // add leading 0 to seconds if needed
+    if (seconds < 10) {
+        seconds = "0" + seconds
+    }
+
+    // get AM or PM
+    if (now.getHours() >= 12) {
+        meridiem = 'PM'
+    } else {
+        meridiem = 'AM'
+    }
+
+    // format time (HH:MM:SS AM/PM)
+    const timeString = hours + ":" + minutes + ':' + seconds + ' ' + meridiem
+
+    // update html time element
+    const timeElement = document.getElementById('time')
+    timeElement.innerHTML = timeString
 }
 
-/**
- * @param {Date} date
- */
-function dateFormat(date) {
-  const DAYS = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
-  const MONTHS = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec"
-  ];
-
-  return `${DAYS[date.getDay()]}, ${
-    MONTHS[date.getMonth()]
-  } ${date.getDate()} ${date.getFullYear()}`;
-}
-
-setInterval(() => {
-  const now = new Date();
-
-  timeElement.textContent = timeFormat(now);
-  dateElement.textContent = dateFormat(now);
-}, 200);
-
+setInterval(updateClock, 1000);
+updateClock();
