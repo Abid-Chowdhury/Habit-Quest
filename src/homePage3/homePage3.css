@@ -139,6 +139,7 @@ header {
     .left-side {
         display: flex;
         flex-direction: row;
+        width: 50%;
         
         .main-character-profile-picture {
             height: 20vh;
@@ -195,7 +196,24 @@ header {
 
         }
 
-        .right-side {}
+        .right-side {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            color: var(--whiteh);
+            text-align: center;
+            justify-content: center;
+            
+            .time {
+                font-size: 52px;
+                font-weight: 600;
+            }
+
+            .day-date {
+                font-size: 32px;
+            }
+
+        }
 
 }
 
