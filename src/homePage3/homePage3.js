@@ -43,3 +43,25 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
+// Update date function
+function updateDate() {
+    const now = new Date()
+
+    // formatting options
+    const options = {
+        month: 'short',
+        day: '2-digit',
+        year: 'numeric'
+    }
+
+    // convert date to format
+    const dateString = now.toLocaleDateString('en-US', options)
+
+    // update date element
+    const dateElement = document.getElementById('date')
+    dateElement.innerHTML = dateString
+}
+
+updateDate()
+setInterval(updateDate, 1000)
