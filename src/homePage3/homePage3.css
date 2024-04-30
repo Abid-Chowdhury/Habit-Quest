@@ -137,6 +137,9 @@ header {
     display: flex;
 
     .left-side {
+        display: flex;
+        flex-direction: row;
+        
         .main-character-profile-picture {
             height: 20vh;
             width: 20vh;
@@ -150,7 +153,12 @@ header {
               height: 100%;
               background-size: cover;
             }
-        
+          }
+
+          .main-character-attributes div {
+              width: 50px;
+              height: 50px;
+              background: red;
           }
 
         }
