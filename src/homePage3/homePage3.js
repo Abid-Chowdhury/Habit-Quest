@@ -54,10 +54,3 @@ setInterval(() => {
   dateElement.textContent = dateFormat(now);
 }, 200);
 
-const profileButton = document.getElementById("profileButton");
-const profileSidebar = document.getElementById("profileSidebar");
-
-profileButton.addEventListener('click',function(){
-  profileSidebar.classList.toggle("show")
-});
-
