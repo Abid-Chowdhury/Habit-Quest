@@ -140,6 +140,7 @@ header {
         display: flex;
         flex-direction: row;
         width: 50%;
+        justify-content: center;
         
         .main-character-profile-picture {
             height: 20vh;
