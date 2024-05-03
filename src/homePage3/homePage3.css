@@ -244,7 +244,6 @@ header {
             padding: 2%;
 
             .add-task {
-                background-color: red;
                 display: flex;
                 justify-content: space-around;
 
@@ -252,6 +251,13 @@ header {
                     width: 100%;
                     padding: 2%;
                     border-radius: 8px;
+                    font-size: 16px;
+                    border: 2px solid black;
+                    outline: none;
+                }
+
+                input:focus {
+                    border: 2px solid var(--greenblueh);
                 }
             }
 
