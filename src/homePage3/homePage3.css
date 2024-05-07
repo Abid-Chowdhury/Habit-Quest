@@ -94,6 +94,11 @@ header {
           display: inline-block;
         }
 
+        .active {
+            color: var(--greenblueh);
+            font-weight: 700;
+        }
+
         a::before,
         a::after {
          content: '';
