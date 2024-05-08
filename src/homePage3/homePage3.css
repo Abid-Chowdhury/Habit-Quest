@@ -337,16 +337,47 @@ header {
                 .task-item {
                     display: flex;
                     flex-direction: row;
+                    justify-content: space-between;
                     background-color: var(--darkGreenr);
                     border-radius: 8px;
                     padding: 2%;
                     margin-bottom: 2%;
                     border: 2px solid var(--lightGreener);
 
-                    .task-label {
-                        font-size: 1.5em;
-                        color: var(--whiteh);
-                        margin: 0;                        
+                    .left {
+                        display: flex;
+                        align-items: center;
+                        .task-label {
+                            font-size: 1.5em;
+                            color: var(--whiteh);
+                            margin: 0;                        
+                        }
+                    }
+
+                    .right {
+                        display: flex;
+                        flex-direction: row;
+                        .done-button {
+                            width: 32px;
+                            height: 32px;
+                            font-size: 20px;
+                            background-color: var(--lightGreeneh);
+                            border-radius: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .cancel-button {
+                            width: 32px;
+                            height: 32px;
+                            font-size: 20px;
+                            background-color: var(--lightGreeneh);
+                            border-radius: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
                     }
 
                 }
