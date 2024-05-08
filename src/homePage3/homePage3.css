@@ -312,7 +312,7 @@ header {
                     font-size: 1.3em;
                     border: 2px solid transparent;
                     outline: none;
-                    background-color: var(--lightGreeneh);
+                    background-color: var(--lightGreener);
                     color: white;
                 }
 
@@ -320,9 +320,16 @@ header {
                     color: var(--greenblueh)
                 }
 
+                input:hover {
+                    background-color: var(--lightGreeneh);
+                    transition: .3s ease;
+                    cursor: pointer;
+                }
+
                 input:focus {
                     border: 2px solid var(--greenblueh);
                     background-color: var(--darkGreenr);
+                    cursor: text;
                 }
             }
 
