@@ -337,10 +337,11 @@ header {
                 .task-item {
                     display: flex;
                     flex-direction: row;
-                    background-color: var(--lightGreener);
+                    background-color: var(--darkGreenr);
                     border-radius: 8px;
                     padding: 2%;
                     margin-bottom: 2%;
+                    border: 2px solid var(--lightGreener);
 
                     .task-label {
                         font-size: 1.5em;
@@ -348,6 +349,11 @@ header {
                         margin: 0;                        
                     }
 
+                }
+
+                .task-item:hover {
+                    background-color: var(--lightGreener);
+                    transition: .3s ease;
                 }
                 
             }
