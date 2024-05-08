@@ -303,6 +303,7 @@ header {
             .add-task {
                 display: flex;
                 justify-content: space-around;
+                margin-bottom: 2%;
 
                 input {
                     width: 100%;
@@ -321,6 +322,7 @@ header {
 
                 input:focus {
                     border: 2px solid var(--greenblueh);
+                    background-color: var(--darkGreenr);
                 }
             }
 
@@ -328,11 +330,15 @@ header {
                 .task-item {
                     display: flex;
                     flex-direction: row;
-                    /* background-color: red; */
+                    background-color: var(--lightGreener);
+                    border-radius: 8px;
+                    padding: 2%;
+                    margin-bottom: 2%;
 
                     .task-label {
                         font-size: 1.5em;
                         color: var(--whiteh);
+                        margin: 0;                        
                     }
 
                 }
