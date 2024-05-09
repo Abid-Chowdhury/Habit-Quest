@@ -181,6 +181,12 @@ header {
         
       
   }
+  .imageBox{
+    width:25px;
+    height:25px;
+    position:relative;
+    background: var(--whiteh);
+  }
 
   .word_Field{
     width: 400px;
