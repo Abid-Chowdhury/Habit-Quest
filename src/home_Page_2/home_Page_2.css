@@ -18,6 +18,16 @@
     --greenr: rgba(156, 222, 159, 255);
 
     --yellowh: #ffdf00;
+
+    --darkGreeneh: #062726;
+    --darkGreenr: rgba(6, 39, 38, 0.8);
+    
+    --lightGreeneh: #136F63;
+    --lightGreener: rgba(19, 111, 99, 0.5);
+
+    --greenblueh: #0CA4A5;
+    --greenBluer: rgba(12, 164, 165, 0.5);
+
   }
 
  
@@ -34,7 +44,7 @@
   /*Likely Redundant*/
   
 .background-image {
-  background-image: url('../Assets/Backgrounds/background.jpg');
+  background-image: url('../Assets/Backgrounds/DeerForestBG.png');
   background-repeat: no-repeat;
   background-size: cover; 
   height: 100vh;
@@ -120,8 +130,8 @@ header {
 }
 .profileSidebar{
   width:200px;
-  height:200%;
-  background-color: var(--yellowh);
+  height:1000%;
+  background-color: var(--darkGreeneh);
   position:fixed;
   top:0;
   right:-600px;
@@ -134,7 +144,8 @@ header {
 }
 .profileSidebar.show{
   right:0;
-  color:var(--blueh);
+  position: absolute;
+  z-index: 1;
 }
 .sidebarChoices{
   z-index:1;
@@ -149,7 +160,6 @@ header {
   }
 
   .words{
-    color:var(--whiteh);
     font-family:Inter;
     font-size: 30px;
     
@@ -159,9 +169,6 @@ header {
     justify-content: space-between ;
     position:relative;
     top:300px;
-    color:var(--yellowh);
-    color:var(--whiteh);
-    color:var(--yellowh);
     font-family:Inter;
     font-size: 30px;
   }
@@ -176,17 +183,67 @@ header {
     
   }
   .taskBox{
-    width: 272px;
+    width: 300px;
     height: 421px;
-    background: var(--whiteh);
-    opacity: 1;
+    background: var(--darkGreenr);
     align-items: center;
     top:376px;
     overflow: hidden;
     font-family: Inter;
+    color:var(--whiteh);
     font-size:40px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius:10px;
 
+  }
+  .searchBar{
+    height:50px;
+    width:200px;
+    background:var(--whiteh);
+    border-radius:10px;
+    color:var(--blackh);
+    font-size:30px;
+    flex-grow: 1;
+  }
+  .add_QuestBar{
+    height:50px;
+    width:275px;
+    margin-left:10px;
+    background:var(--whiteh);
+    border-radius:10px;
+    font-size:30px;
+    flex-grow: 1;
+  }
+  .task_Bar{
+    height:50px;
+    width:200px;
+    margin-right: 10px;
+    background:var(--whiteh);
+    border-radius:10px;
+    color:var(--blackh);
+    font-size:30px;
+    flex-grow: 1;
+  }
+  .check_Box{
+    background:var(--whiteh);
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    z-index: inherit;
+    border-radius:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /*
+  This is the Home page version of Personals pages text_Box
+  so one or the other will need to be renamed, I prefer text_Box to be 
+  renamed but we'll see
+  */
+  .item_Box{
+    height:100px;
+    width:100%;
+    align-items: center;
+    display:flex;
   }
   /*
     .calendarBox {
@@ -210,30 +267,59 @@ header {
   .mainBanner {
     width: 100%;
     height: 194px;
-    background: var(--blueh);
-    opacity: 1;
+    background: var(--darkGreenr);
+    z-index:0;
     position: absolute;
     top: 105px;
     left: 0px;
     border: 1px solid rgba(0,0,0,1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    
   }
+  /*
+  for some reason theres a bit of margin or something 
+  just needs careful observation we'll see
+  */
+  .bottom_Bar{
+    background:var(--greenBluer);
+    width:100%;
+    height:75px;
+    z-index:0;
+    position:absolute;
+    top:300px;
+    right:0px;
+    display:flex;
+    align-items: center;
+  }
+  .star_Image{
+    width: 45px;
+    height: 42px;
+    background: url("../Assets/Symbols/star.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+    left:50px;
+    margin-right:20px;
+  }
+
+
+
   .dateTime{
     font-family: Inter;
     color:var(--whiteh);
-    font-size: 40px;
+    font-size: 30px;
     position:absolute;
-    right:700px;
+    right:300px;
     top:50px;
     
   }
   .date{
-    font-size:50px;
+    font-size:120%;
   }
   .time{
-    color:var(--blackh);
+    font-size:80%;
   }
  
   /* .streak{
@@ -277,6 +363,61 @@ header {
     left: 30px;
     overflow: hidden;
   }
+
+  .partyCharacter1 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/Heroin2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
+
+  
+  .partyCharacter2 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/Heroine3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
+  .partyCharacter3 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/Heroine4.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
+  .partyCharacter4 {
+    width: 127px;
+    height: 128px;
+    background: url("../Assets/Characters/MainCharacter1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    overflow: hidden;
+  }
   /* Daily Quest Task List */
 
   /* Weekly Quests*/
@@ -299,11 +440,11 @@ header {
   }
 
    /*Main Character Circle */
-  .mainCharacterFiller {
+  .characterFiller {
     width: 181px;
     height: 167px;
-    background: var(--whiteh);
-    top: 25px;
+    background: var(--greenBluer);
+    top:10px;
     opacity: 1;
     position: absolute;
     
@@ -391,6 +532,7 @@ header {
     overflow: hidden;
   }
   
+ 
 
   
   
