@@ -220,4 +220,35 @@ header {
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(240, 247, 244, 0.43);
+
+
+	.top {
+		.left-side {
+			display: flex;
+			flex-direction: row;
+			width: 50%;
+			justify-content: center;
+
+			.profile-picture {
+				height: 20vh;
+				width: 20vh;
+				background-color: var(--greenBluer);
+				margin: 15px;
+				border-radius: 50%;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+
+				img {
+					width: 70%;
+					height: 85%;
+					background-size: cover;
+				}
+
+			}
+		}
+	}
+
 }
+
