@@ -283,22 +283,36 @@ header {
 		flex-direction: column;
 		color: var(--whiteh);
 
-		.email-container {
+		.email-container,
+		.username-container,
+		.password-container {
 			display: flex;
 			flex-direction: row;
-			text-align: center;
+			justify-content: center;
 
-			.email-label {
-				width: 25%;
+			.email-label,
+			.username-label,
+			.password-label {
+				padding-right: 15px;
+
 				p {
-					font-size: 32px;;
+					font-size: 32px;
+					font-weight: 600;
 					margin: 0;
 				}
 			}
 
-			.email-input {
-				width: 75%;
+			.email-input,
+			.username-input,
+			.password-input {
 				margin: 0;
+				padding-left: 15px;
+
+				input {
+					/* width: 50%; */
+					font-size: 32px;
+				}
+
 			}
 
 
