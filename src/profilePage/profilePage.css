@@ -270,5 +270,33 @@ header {
 		}
 	}
 
+	.middle {
+		display: flex;
+		flex-direction: column;
+		color: var(--whiteh);
+
+		.email-container {
+			display: flex;
+			flex-direction: row;
+			text-align: center;
+
+			.email-label {
+				width: 25%;
+				p {
+					font-size: 32px;;
+					margin: 0;
+				}
+			}
+
+			.email-input {
+				width: 75%;
+				margin: 0;
+			}
+
+
+		}
+
+	}
+
 }
 
