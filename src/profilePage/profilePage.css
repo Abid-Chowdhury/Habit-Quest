@@ -221,19 +221,22 @@ header {
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(240, 247, 244, 0.43);
 
-
 	.top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		
 		.left-side {
 			display: flex;
 			flex-direction: row;
-			width: 50%;
 			justify-content: center;
 
 			.profile-picture {
 				height: 20vh;
 				width: 20vh;
 				background-color: var(--greenBluer);
-				margin: 15px;
+				margin: 25px;
 				border-radius: 50%;
 				text-align: center;
 				justify-content: center;
@@ -247,6 +250,23 @@ header {
 				}
 
 			}
+		}
+
+		.right-side {
+			color: var(--whiteh);
+			
+			h1 {
+				font-size: 48px;
+				font-weight: 600;
+				margin: 0;
+			}
+
+			p {
+				color: gray;
+				font-size: 18px;
+				margin: 0;
+			}
+
 		}
 	}
 
