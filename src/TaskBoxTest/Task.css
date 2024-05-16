@@ -400,15 +400,17 @@ header {
 
 }
 
+ul{
+    display:block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end:1em;
+    margin-inline-end: 0px;
+    padding-inline: 0px;
+    unicode-bidi: isolate;
+}    
+
 ul li{
-    list-style:none;
-    font-size: 17px;
-    padding:12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position:relative;
-    color:antiquewhite;
-    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -417,4 +419,15 @@ ul li{
     padding: 2%;
     margin-bottom: 2%;
     border: 2px solid var(--lightGreener);
+
+    .left {
+        display: flex;
+        align-items: center;
+        .task-label {
+            font-size: 1.5em;
+            color: var(--whiteh);
+            margin: 0;                        
+        }
+    }
 }
+
