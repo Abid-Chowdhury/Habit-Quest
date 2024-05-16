@@ -68,14 +68,14 @@ setInterval(updateDate, 1000)
 const habits = document.getElementById("habits")
 const habitContainer = document.getElementById("habit-container")
 function addHabit(){
-    if(habits.value==''){
-        alert("Enter Habit")
+    if(habits.value ===''){
+        alert("Enter Habit");
 
     }
     else{
         let li = document.createElement("li");
-        li.innerHTML = habit.value;
+        li.innerHTML = habits.value;
         habitContainer.appendChild(li);
-        
+
     }
 }
