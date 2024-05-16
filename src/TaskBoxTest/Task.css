@@ -407,13 +407,14 @@ ul li{
     user-select: none;
     cursor: pointer;
     position:relative;
-
-}
-ul li::before{
-    content:'';
-    position:absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    
+    color:antiquewhite;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darkGreenr);
+    border-radius: 8px;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 2px solid var(--lightGreener);
 }

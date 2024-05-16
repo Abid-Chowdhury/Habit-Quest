@@ -65,17 +65,26 @@ function updateDate() {
 
 updateDate()
 setInterval(updateDate, 1000)
-const habits = document.getElementById("habits")
+
 const habitContainer = document.getElementById("habit-container")
+document.getElementById("habit").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        addHabit();
+    }
+});
+
+
 function addHabit(){
-    if(habits.value ===''){
+    if(habit.value === ''){
         alert("Enter Habit");
 
     }
     else{
         let li = document.createElement("li");
-        li.innerHTML = habits.value;
+        li.innerHTML = habit.value;
         habitContainer.appendChild(li);
 
     }
+    habit.value = '';
 }
