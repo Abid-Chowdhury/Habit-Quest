@@ -83,42 +83,11 @@
                 <div class="task-body">
                     <div class="add-task">
                         <input type="text" id="habits" name="habits" placeholder="Add a Habit">
+                        <button onclick="addHabit()">add</button>
                     </div>
-
-                    <div class="task-list">
-                        <div class="task-item" id="task-1">
-                            <div class="left">
-                                <p class="task-label">Code for 30 minutes</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-
-                        <div class="task-item" id="task-2">
-                            <div class="left">
-                                <p class="task-label">Workout for 10 minutes</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-
-                        <div class="task-item" id="task-3">
-                            <div class="left">
-                                <p class="task-label">Read book for 5 minutes</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <ul id="habit-container">
+                        
+                    </ul>                
                 </div>
             </div>
 
@@ -129,7 +98,7 @@
 
                 <div class="task-body">
                     <div class="add-task">
-                        <input type="text" id="habits" name="habits" placeholder="Add a Daily">
+                        <input type="text" id="dailies" name="dailies" placeholder="Add a Daily">
                     </div>
 
                     <div class="task-list">
@@ -176,7 +145,7 @@
 
                 <div class="task-body">
                     <div class="add-task">
-                        <input type="text" id="habits" name="habits" placeholder="Add a To Do">
+                        <input type="text" id="todos" name="todos" placeholder="Add a To Do">
                     </div>
 
                     <div class="task-list">
