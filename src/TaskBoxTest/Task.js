@@ -84,7 +84,30 @@ function addHabit(){
         let li = document.createElement("li");
         li.innerHTML = habit.value;
         habitContainer.appendChild(li);
+        /*Below is the Javascript for the X button*/
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
 
     }
     habit.value = '';
+    dataSave();
 }
+
+habitContainer.addEventListener("click",function(e){
+    if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        dataSave();
+    }
+
+}, false);
+
+
+function dataSave(){
+    localStorage.setItem("data",habitContainer.innerHTML);
+}
+
+function dataDisplay(){
+    habitContainer.innerHTML = localStorage.getItem("data");
+}
+dataDisplay();
