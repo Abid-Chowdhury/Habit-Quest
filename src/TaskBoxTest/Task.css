@@ -434,6 +434,7 @@ ul li{
     }
 }
 
+
 ul li span{
     position:relative;
     left:130px;
@@ -448,6 +449,12 @@ ul li span{
     cursor:pointer;
     color:var(--whiteh);
     background:var(--lightGreener);
+    
+}
+
+ul li:hover{
+    background: var(--lightGreener);
+    transition: .3s ease;
 }
 ul li span:hover{
     background: var(--lightGreeneh);
