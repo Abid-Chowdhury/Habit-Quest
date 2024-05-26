@@ -86,8 +86,11 @@ function addHabit(){
         habitContainer.appendChild(li);
         /*Below is the Javascript for the X button*/
         let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
+        span.innerHTML ="\u00d7";
         li.appendChild(span);
+        let span2 = document.createElement("span2");
+        span2.innerHTML="\u00d7";
+        li.appendChild(span2);
 
     }
     habit.value = '';
@@ -96,6 +99,10 @@ function addHabit(){
 
 habitContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        dataSave();
+    }
+    else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
         dataSave();
     }
