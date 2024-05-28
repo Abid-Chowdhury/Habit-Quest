@@ -399,7 +399,7 @@ header {
     }
 
 }
-
+/**/
 ul{
     display:block;
     list-style-type: disc;
@@ -411,7 +411,7 @@ ul{
     color:var(--whiteh);
     
 }    
-
+/*Task List*/
 ul li{
     display: flex;
     flex-direction: row;
@@ -434,7 +434,7 @@ ul li{
     }
 }
 
-
+/*The Checkmark */
 ul li span{
     position:relative;
     left:130px;
@@ -451,15 +451,17 @@ ul li span{
     background:var(--lightGreener);
     
 }
-
+/*The Task Item Hover*/
 ul li:hover{
     background: var(--lightGreener);
     transition: .3s ease;
 }
+/*The Button Hover*/
 ul li span:hover{
     background: var(--lightGreeneh);
 }
 
+/*The X mark*/
 ul li span2{
     position:relative;
     right:0px;
