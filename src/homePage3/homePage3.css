@@ -271,9 +271,7 @@ header {
             .date {
                 font-size: 32px;
             }
-
         }
-
 }
 
 .tasks-main-container {
@@ -299,11 +297,13 @@ header {
             border: 1px solid rgba(0,0,0,1);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             padding: 2%;
+            overflow: hidden;
 
             .add-task {
                 display: flex;
                 justify-content: space-around;
                 margin-bottom: 2%;
+                height: 15%;
 
                 input {
                     width: 100%;
@@ -340,6 +340,11 @@ header {
             .task-list {
                 display: flex;
                 flex-direction: column;
+                height: 85%;
+                overflow: hidden;
+                border-radius: 8px;
+                overflow-y: scroll;
+
                 .task-item {
                     display: flex;
                     flex-direction: row;
@@ -405,6 +410,10 @@ header {
                     transition: .3s ease;
                 }
                 
+            }
+
+            .task-list::-webkit-scrollbar {
+                display: none;
             }
 
         }
