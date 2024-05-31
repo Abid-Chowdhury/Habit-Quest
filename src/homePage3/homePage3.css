@@ -314,6 +314,10 @@ header {
                     outline: none;
                     background-color: var(--lightGreener);
                     color: white;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    max-width: 100%;
                 }
 
                 input::placeholder {
@@ -350,7 +354,7 @@ header {
                         .task-label {
                             font-size: 1.5em;
                             color: var(--whiteh);
-                            margin: 0;                        
+                            margin: 0;
                         }
                     }
 
