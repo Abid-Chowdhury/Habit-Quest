@@ -95,22 +95,32 @@ function addHabit(){
 
     }
     habit.value = '';
-    dataSave();
+    dataSaveHabit();
 }
+
+
 
 habitContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
-        dataSave();
+        dataSaveHabit();
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
-        dataSave();
+        dataSaveHabit();
     }
 
 }, false);
 
 
+
+function dataSaveHabit(){
+    localStorage.setItem("dataHabit",habitContainer.innerHTML);
+}
+
+function dataDisplayHabit(){
+    habitContainer.innerHTML = localStorage.getItem("dataHabit");
+}
 
 
 const taskContainer = document.getElementById("task-container")
@@ -142,28 +152,87 @@ function addTask(){
 
     }
     daily.value = '';
-    dataSave();
+    dataSaveTask();
 }
 
 /* TaskContainer */
 taskContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
-        dataSave();
+        dataSaveTask();
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
-        dataSave();
+        dataSaveTask();
     }
 
 }, false);
 
 
-function dataSave(){
-    localStorage.setItem("data",taskContainer.innerHTML);
+function dataSaveTask(){
+    localStorage.setItem("dataTask",taskContainer.innerHTML);
 }
 
-function dataDisplay(){
-    taskContainer.innerHTML = localStorage.getItem("data");
+function dataDisplayTask(){
+    taskContainer.innerHTML = localStorage.getItem("dataTask");
 }
-dataDisplay();
+
+
+
+const todoContainer = document.getElementById("todo-Container")
+document.getElementById("todo").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        addTodo();
+    }
+});
+
+todoContainer.addEventListener("click",function(e){
+    if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        dataSaveTodo();
+    }
+    else if(e.target.tagName === "SPAN2"){
+        e.target.parentElement.remove();
+        dataSaveTodo();
+    }
+
+}, false);
+
+function addTodo(){
+    if(todo.value === ''){
+        alert("Enter todo");
+
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = todo.value;
+        todoContainer.appendChild(li);
+        /*Below is the Javascript for the X button*/
+        let span = document.createElement("span");
+        span.innerHTML ="&#10003;";
+        li.appendChild(span);
+        let span2 = document.createElement("span2");
+        span2.innerHTML="\u00d7";
+        "\u00d7"
+        li.appendChild(span2);
+
+    }
+    todo.value = '';
+    dataSaveTodo();
+}
+
+/* TaskContainer */
+
+
+
+function dataSaveTodo(){
+    localStorage.setItem("dataTodo",todoContainer.innerHTML);
+}
+
+function dataDisplayTodo(){
+    todoContainer.innerHTML = localStorage.getItem("dataTodo");
+}
+dataDisplayTodo();
+dataDisplayTask();
+dataDisplayHabit();
