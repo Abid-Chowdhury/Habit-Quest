@@ -77,8 +77,8 @@ document.getElementById("habit").addEventListener("keypress", function(event){
 
 function addHabit(){
     if(habit.value === ''){
-       /* alert("Enter Habit");
-        */
+     alert("Enter Habit");
+    
     }
     else{
         let li = document.createElement("li");
@@ -114,22 +114,22 @@ habitContainer.addEventListener("click",function(e){
 
 
 const taskContainer = document.getElementById("task-container")
-document.getElementById("dailies").addEventListener("keypress", function(event){
+document.getElementById("daily").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
         event.preventDefault();
-        addHabit();
+        addTask();
     }
 });
 
 
 function addTask(){
-    if(dailies.value === ''){
+    if(daily.value === ''){
         alert("Enter Task");
 
     }
     else{
         let li = document.createElement("li");
-        li.innerHTML = dailies.value;
+        li.innerHTML = daily.value;
         taskContainer.appendChild(li);
         /*Below is the Javascript for the X button*/
         let span = document.createElement("span");
@@ -141,7 +141,7 @@ function addTask(){
         li.appendChild(span2);
 
     }
-    dailies.value = '';
+    daily.value = '';
     dataSave();
 }
 
