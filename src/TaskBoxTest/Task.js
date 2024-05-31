@@ -77,8 +77,8 @@ document.getElementById("habit").addEventListener("keypress", function(event){
 
 function addHabit(){
     if(habit.value === ''){
-        alert("Enter Habit");
-
+       /* alert("Enter Habit");
+        */
     }
     else{
         let li = document.createElement("li");
@@ -111,11 +111,59 @@ habitContainer.addEventListener("click",function(e){
 }, false);
 
 
+
+
+const taskContainer = document.getElementById("task-container")
+document.getElementById("dailies").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        addHabit();
+    }
+});
+
+
+function addTask(){
+    if(dailies.value === ''){
+        alert("Enter Task");
+
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = dailies.value;
+        taskContainer.appendChild(li);
+        /*Below is the Javascript for the X button*/
+        let span = document.createElement("span");
+        span.innerHTML ="&#10003;";
+        li.appendChild(span);
+        let span2 = document.createElement("span2");
+        span2.innerHTML="\u00d7";
+        "\u00d7"
+        li.appendChild(span2);
+
+    }
+    dailies.value = '';
+    dataSave();
+}
+
+/* TaskContainer */
+taskContainer.addEventListener("click",function(e){
+    if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        dataSave();
+    }
+    else if(e.target.tagName === "SPAN2"){
+        e.target.parentElement.remove();
+        dataSave();
+    }
+
+}, false);
+
+
 function dataSave(){
-    localStorage.setItem("data",habitContainer.innerHTML);
+    localStorage.setItem("data",taskContainer.innerHTML);
 }
 
 function dataDisplay(){
-    habitContainer.innerHTML = localStorage.getItem("data");
+    taskContainer.innerHTML = localStorage.getItem("data");
 }
 dataDisplay();
