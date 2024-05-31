@@ -338,6 +338,8 @@ header {
             }
 
             .task-list {
+                display: flex;
+                flex-direction: column;
                 .task-item {
                     display: flex;
                     flex-direction: row;
@@ -347,20 +349,26 @@ header {
                     padding: 2%;
                     margin-bottom: 2%;
                     border: 2px solid var(--lightGreener);
-
+                    
                     .left {
                         display: flex;
-                        align-items: center;
+                        align-items: center;                        
+                        max-width: 85%;
+
                         .task-label {
                             font-size: 1.5em;
                             color: var(--whiteh);
                             margin: 0;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
                         }
                     }
 
                     .right {
                         display: flex;
                         flex-direction: row;
+                        width: 15%;
 
                         div {
                             cursor: pointer;
