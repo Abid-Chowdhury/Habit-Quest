@@ -66,6 +66,12 @@ function updateDate() {
 updateDate()
 setInterval(updateDate, 1000)
 
+let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
+function HabitCounter() {
+    localStorage.setItem('counter', counter);
+    console.log(counter);
+
+}
 const habitContainer = document.getElementById("habit-container")
 document.getElementById("habit").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
@@ -100,18 +106,26 @@ function addHabit(){
 
 
 
-habitContainer.addEventListener("click",function(e){
-    if(e.target.tagName === "SPAN"){
-        e.target.parentElement.remove();
-        dataSaveHabit();
-    }
-    else if(e.target.tagName === "SPAN2"){
-        e.target.parentElement.remove();
-        dataSaveHabit();
-    }
+function HabitCounter() {
+    localStorage.setItem('counter', counter);
+    console.log(counter);
+}
 
+// Your other code remains the same...
+
+habitContainer.addEventListener("click", function(e) {
+    if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        counter++;
+        dataSaveHabit();
+        HabitCounter();
+    } else if (e.target.tagName === "SPAN2") {
+        e.target.parentElement.remove();
+        counter--;
+        dataSaveHabit();
+        HabitCounter();
+    }
 }, false);
-
 
 
 function dataSaveHabit(){
