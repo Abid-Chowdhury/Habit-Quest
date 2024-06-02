@@ -108,6 +108,7 @@ function addHabit(){
 
 function HabitCounter() {
     localStorage.setItem('counter', counter);
+    document.getElementById("counterValue").textContent = counter;
     console.log(counter);
 }
 
@@ -238,7 +239,7 @@ function addTodo(){
 
 /* TaskContainer */
 
-
+document.getElementById("counterValue").textContent = counter;
 
 function dataSaveTodo(){
     localStorage.setItem("dataTodo",todoContainer.innerHTML);
