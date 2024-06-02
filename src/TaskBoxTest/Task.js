@@ -67,11 +67,7 @@ updateDate()
 setInterval(updateDate, 1000)
 
 let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
-function HabitCounter() {
-    localStorage.setItem('counter', counter);
-    console.log(counter);
 
-}
 const habitContainer = document.getElementById("habit-container")
 document.getElementById("habit").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
@@ -146,7 +142,11 @@ document.getElementById("daily").addEventListener("keypress", function(event){
     }
 });
 
-
+function taskCounter() {
+    localStorage.setItem('counter', counter);
+    document.getElementById("counterValue").textContent = counter;
+    console.log(counter);
+}
 function addTask(){
     if(daily.value === ''){
         alert("Enter Task");
@@ -174,11 +174,15 @@ function addTask(){
 taskContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        counter++
         dataSaveTask();
+        taskCounter();
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
+        counter--
         dataSaveTask();
+        taskCounter();
     }
 
 }, false);
@@ -201,15 +205,25 @@ document.getElementById("todo").addEventListener("keypress", function(event){
         addTodo();
     }
 });
-
+function todoCounter() {
+    localStorage.setItem('counter', counter);
+    document.getElementById("counterValue").textContent = counter;
+    console.log(counter);
+}
 todoContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        counter++
         dataSaveTodo();
+        todoCounter();
+        
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
+        counter--
         dataSaveTodo();
+        todoCounter();
+        
     }
 
 }, false);
