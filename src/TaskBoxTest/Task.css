@@ -413,6 +413,7 @@ ul{
 }    
 /*Task List*/
 ul li{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -436,7 +437,7 @@ ul li{
 
 /*The Checkmark */
 ul li span{
-    position:relative;
+    position:absolute;
     left:130px;
     top:0px;
     width: 40px;
