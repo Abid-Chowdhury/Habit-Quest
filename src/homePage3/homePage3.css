@@ -412,9 +412,6 @@ header {
                 
             }
 
-            .task-list::-webkit-scrollbar {
-                /* display: none; */
-            }
 
         }
 
