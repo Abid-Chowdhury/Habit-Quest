@@ -413,12 +413,22 @@ header {
                 
             }
             
-            .task-list::-webkit-scrollbar {
+            /* hidden scrollbar for tasks */
+            .hide {
+                padding-right: 0;
+            }
+
+            .hide::-webkit-scrollbar {
+                width: 0;
+            }
+
+            /* visible scrollbar for tasks */
+            .show::-webkit-scrollbar {
                 width: 15px;
                 padding-left: 10px;
             }
 
-            .task-list::-webkit-scrollbar-track {
+           .task-list::-webkit-scrollbar-track {
                 box-shadow: inset 0 0 3px gray;
                 background-color: var(--darkGreeneh);
                 border-radius: 10px;
@@ -429,7 +439,7 @@ header {
                 background-color: var(--lightGreeneh);
                 border-radius: 10px;
             }
-            
+
         }
 
     }
