@@ -66,20 +66,8 @@ function updateDate() {
 updateDate()
 setInterval(updateDate, 1000)
 
-
-
-
-
-
-
-
-
-
-// CHECK FOR TASKS OVERFLOW
-// Determines if the passed element is overflowing its bounds,
-// either vertically or horizontally.
-// Will temporarily modify the "overflow" style to detect this
-// if necessary.
+// Show a scrollbar if tasks are overflowing
+// Check overflow function
 function checkOverflow(elementBeingChecked)
 {
    var curOverflow = elementBeingChecked.style.overflow;
@@ -95,40 +83,19 @@ function checkOverflow(elementBeingChecked)
    return isOverflowing;
 }
 
-var elm = document.getElementById('habits-task-list')
-if (!checkOverflow(elm)) {
-    console.log('no overflow')
-    elm.classList.remove('show')
-    elm.classList.add('hide')
-    
-} else {
-    console.log('overflow')
-    elm.classList.remove('hide')
-    elm.classList.add('show')
+// Call function for habit/daily/todo
+const listOfTasks = ['habits-task-list', 'daily-task-list', 'todo-task-list']
 
+for (let i = 0; i < listOfTasks.length; i++) {
+    var elementToCheck = document.getElementById(listOfTasks[i])
+    if (!checkOverflow(elementToCheck)) {
+        elementToCheck.classList.remove('show')
+        elementToCheck.classList.add('hide')
+    } else {
+        elementToCheck.classList.remove('hide')
+        elementToCheck.classList.add('show')
+
+    }
 }
 
-var elm = document.getElementById('daily-task-list')
-if (!checkOverflow(elm)) {
-    console.log('no overflow')
-    elm.classList.remove('show')
-    elm.classList.add('hide')
-    
-} else {
-    console.log('overflow')
-    elm.classList.remove('hide')
-    elm.classList.add('show')
 
-}
-var elm = document.getElementById('todo-task-list')
-if (!checkOverflow(elm)) {
-    console.log('no overflow')
-    elm.classList.remove('show')
-    elm.classList.add('hide')
-    
-} else {
-    console.log('overflow')
-    elm.classList.remove('hide')
-    elm.classList.add('show')
-
-}
