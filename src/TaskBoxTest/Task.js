@@ -83,18 +83,7 @@ function addHabit(){
     
     }
     else{
-        let li = document.createElement("li");
-        li.innerHTML = habit.value;
-        habitContainer.appendChild(li);
-        /*Below is the Javascript for the X button*/
-        let span = document.createElement("span");
-        span.innerHTML ="&#10003;";
-        li.appendChild(span);
-        let span2 = document.createElement("span2");
-        span2.innerHTML="\u00d7";
-        "\u00d7"
-        li.appendChild(span2);
-
+        addItem(habitContainer,habit);
     }
     habit.value = '';
     dataSaveHabit();
@@ -108,6 +97,19 @@ function EntityCounter() {
     console.log(counter);
 }
 
+
+function addItem(container, cValue) {
+    let li = document.createElement("li");
+    li.innerHTML = cValue.value; 
+    container.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = "&#10003;";
+    li.appendChild(span);
+    let span2 = document.createElement("span");
+    span2.innerHTML = "\u00d7";
+    li.appendChild(span2);
+}
+    
 // Your other code remains the same...
 
 habitContainer.addEventListener("click", function(e) {
@@ -149,18 +151,7 @@ function addTask(){
 
     }
     else{
-        let li = document.createElement("li");
-        li.innerHTML = daily.value;
-        taskContainer.appendChild(li);
-        /*Below is the Javascript for the X button*/
-        let span = document.createElement("span");
-        span.innerHTML ="&#10003;";
-        li.appendChild(span);
-        let span2 = document.createElement("span2");
-        span2.innerHTML="\u00d7";
-        "\u00d7"
-        li.appendChild(span2);
-
+        addItem(taskContainer,daily);
     }
     daily.value = '';
     dataSaveTask();
@@ -226,18 +217,7 @@ function addTodo(){
 
     }
     else{
-        let li = document.createElement("li");
-        li.innerHTML = todo.value;
-        todoContainer.appendChild(li);
-        /*Below is the Javascript for the X button*/
-        let span = document.createElement("span");
-        span.innerHTML ="&#10003;";
-        li.appendChild(span);
-        let span2 = document.createElement("span2");
-        span2.innerHTML="\u00d7";
-        "\u00d7"
-        li.appendChild(span2);
-
+        addItem(todoContainer,todo);
     }
     todo.value = '';
     dataSaveTodo();
