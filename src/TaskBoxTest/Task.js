@@ -101,8 +101,8 @@ function addHabit(){
 }
 
 
-
-function HabitCounter() {
+//basically sets the counter value after adding or subtracting a task
+function EntityCounter() {
     localStorage.setItem('counter', counter);
     document.getElementById("counterValue").textContent = counter;
     console.log(counter);
@@ -115,12 +115,12 @@ habitContainer.addEventListener("click", function(e) {
         e.target.parentElement.remove();
         counter++;
         dataSaveHabit();
-        HabitCounter();
+        EntityCounter();
     } else if (e.target.tagName === "SPAN2") {
         e.target.parentElement.remove();
         counter--;
         dataSaveHabit();
-        HabitCounter();
+        EntityCounter();
     }
 }, false);
 
@@ -142,11 +142,7 @@ document.getElementById("daily").addEventListener("keypress", function(event){
     }
 });
 
-function taskCounter() {
-    localStorage.setItem('counter', counter);
-    document.getElementById("counterValue").textContent = counter;
-    console.log(counter);
-}
+
 function addTask(){
     if(daily.value === ''){
         alert("Enter Task");
@@ -176,13 +172,13 @@ taskContainer.addEventListener("click",function(e){
         e.target.parentElement.remove();
         counter++
         dataSaveTask();
-        taskCounter();
+        EntityCounter();
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
         counter--
         dataSaveTask();
-        taskCounter();
+        EntityCounter();
     }
 
 }, false);
@@ -205,24 +201,20 @@ document.getElementById("todo").addEventListener("keypress", function(event){
         addTodo();
     }
 });
-function todoCounter() {
-    localStorage.setItem('counter', counter);
-    document.getElementById("counterValue").textContent = counter;
-    console.log(counter);
-}
+
 todoContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         counter++
         dataSaveTodo();
-        todoCounter();
+        EntityCounter();
         
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
         counter--
         dataSaveTodo();
-        todoCounter();
+        EntityCounter();
         
     }
 
