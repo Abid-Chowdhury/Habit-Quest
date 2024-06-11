@@ -105,7 +105,7 @@ function addItem(container, cValue) {
     let span = document.createElement("span");
     span.innerHTML = "&#10003;";
     li.appendChild(span);
-    let span2 = document.createElement("span");
+    let span2 = document.createElement("span2");
     span2.innerHTML = "\u00d7";
     li.appendChild(span2);
 }
