@@ -76,6 +76,7 @@ document.getElementById("habit").addEventListener("keypress", function(event){
     }
 });
 
+//Adds habit specifically
 
 function addHabit(){
     if(habit.value === ''){
@@ -96,7 +97,7 @@ function EntityCounter() {
     document.getElementById("counterValue").textContent = counter;
     console.log(counter);
 }
-
+//This is a function to add a Check Mark/X mark
 
 function addItem(container, cValue) {
     let li = document.createElement("li");
@@ -116,17 +117,17 @@ habitContainer.addEventListener("click", function(e) {
     if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
         counter++;
-        dataSaveHabit();
+        itemSave("dataHabit",habitContainer);
         EntityCounter();
     } else if (e.target.tagName === "SPAN2") {
         e.target.parentElement.remove();
         counter--;
-        dataSaveHabit();
+        itemSave("dataHabit",habitContainer);
         EntityCounter();
     }
 }, false);
 
-
+//potential redunancy ? Ill save it for later.
 function dataSaveHabit(){
     localStorage.setItem("dataHabit",habitContainer.innerHTML);
 }
@@ -154,7 +155,7 @@ function addTask(){
         addItem(taskContainer,daily);
     }
     daily.value = '';
-    dataSaveTask();
+    itemSave("dataTask",taskContainer);
 }
 
 /* TaskContainer */
@@ -162,25 +163,24 @@ taskContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         counter++
-        dataSaveTask();
+        itemSave("dataTask",taskContainer);
         EntityCounter();
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
         counter--
-        dataSaveTask();
+        itemSave("dataTask",taskContainer);
         EntityCounter();
     }
 
 }, false);
-
-
-function dataSaveTask(){
-    localStorage.setItem("dataTask",taskContainer.innerHTML);
+//Save all types of data
+function itemSave(dataType,containerType){
+    localStorage.setItem("dataType",containerType.innerHTML);
 }
-
-function dataDisplayTask(){
-    taskContainer.innerHTML = localStorage.getItem("dataTask");
+//Displays all type of data
+function itemDisplay(dataType,containerType){
+    containerType.innerHTML = localStorage.getItem("dataType");
 }
 
 
@@ -197,14 +197,14 @@ todoContainer.addEventListener("click",function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         counter++
-        dataSaveTodo();
+        itemSave("dataTodo",todoContainer);
         EntityCounter();
         
     }
     else if(e.target.tagName === "SPAN2"){
         e.target.parentElement.remove();
         counter--
-        dataSaveTodo();
+        itemSave("dataTodo",todoContainer);
         EntityCounter();
         
     }
@@ -220,20 +220,20 @@ function addTodo(){
         addItem(todoContainer,todo);
     }
     todo.value = '';
-    dataSaveTodo();
+    itemSave("dataTodo",todoContainer);
 }
 
 /* TaskContainer */
 
 document.getElementById("counterValue").textContent = counter;
 
-function dataSaveTodo(){
-    localStorage.setItem("dataTodo",todoContainer.innerHTML);
-}
+//function dataSaveTodo(){
+//    localStorage.setItem("dataTodo",todoContainer.innerHTML);
+//}
 
-function dataDisplayTodo(){
-    todoContainer.innerHTML = localStorage.getItem("dataTodo");
-}
-dataDisplayTodo();
-dataDisplayTask();
-dataDisplayHabit();
+//function dataDisplayTodo(){
+//    todoContainer.innerHTML = localStorage.getItem("dataTodo");
+//}
+itemDisplay("dataTask",taskContainer);
+itemDisplay("dataHabit",habitContainer);
+itemDisplay("dataTodo",todoContainer);
