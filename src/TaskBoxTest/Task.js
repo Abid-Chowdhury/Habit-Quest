@@ -87,7 +87,7 @@ function addHabit(){
         addItem(habitContainer,habit);
     }
     habit.value = '';
-    dataSaveHabit();
+    itemSave("dataHabit",habitContainer);
 }
 
 
@@ -111,30 +111,24 @@ function addItem(container, cValue) {
     li.appendChild(span2);
 }
     
+function containerListener(container,cValue){
+    container.addEventListener("click", function(e) {
+        if (e.target.tagName === "SPAN") {
+            e.target.parentElement.remove();
+            counter++;
+            itemSave(cValue,container);
+            EntityCounter();
+        } else if (e.target.tagName === "SPAN2") {
+            e.target.parentElement.remove();
+            counter--;
+            itemSave(cValue,container);
+            EntityCounter();
+        }
+    }, false);
+
+}
 // Your other code remains the same...
-
-habitContainer.addEventListener("click", function(e) {
-    if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
-        counter++;
-        itemSave("dataHabit",habitContainer);
-        EntityCounter();
-    } else if (e.target.tagName === "SPAN2") {
-        e.target.parentElement.remove();
-        counter--;
-        itemSave("dataHabit",habitContainer);
-        EntityCounter();
-    }
-}, false);
-
-//potential redunancy ? Ill save it for later.
-function dataSaveHabit(){
-    localStorage.setItem("dataHabit",habitContainer.innerHTML);
-}
-
-function dataDisplayHabit(){
-    habitContainer.innerHTML = localStorage.getItem("dataHabit");
-}
+containerListener(habitContainer,"dataHabit")
 
 
 const taskContainer = document.getElementById("task-container")
@@ -159,28 +153,15 @@ function addTask(){
 }
 
 /* TaskContainer */
-taskContainer.addEventListener("click",function(e){
-    if(e.target.tagName === "SPAN"){
-        e.target.parentElement.remove();
-        counter++
-        itemSave("dataTask",taskContainer);
-        EntityCounter();
-    }
-    else if(e.target.tagName === "SPAN2"){
-        e.target.parentElement.remove();
-        counter--
-        itemSave("dataTask",taskContainer);
-        EntityCounter();
-    }
+containerListener(taskContainer,"dataTask")
 
-}, false);
 //Save all types of data
 function itemSave(dataType,containerType){
-    localStorage.setItem("dataType",containerType.innerHTML);
+    localStorage.setItem(dataType,containerType.innerHTML);
 }
 //Displays all type of data
 function itemDisplay(dataType,containerType){
-    containerType.innerHTML = localStorage.getItem("dataType");
+    containerType.innerHTML = localStorage.getItem(dataType);
 }
 
 
@@ -193,23 +174,9 @@ document.getElementById("todo").addEventListener("keypress", function(event){
     }
 });
 
-todoContainer.addEventListener("click",function(e){
-    if(e.target.tagName === "SPAN"){
-        e.target.parentElement.remove();
-        counter++
-        itemSave("dataTodo",todoContainer);
-        EntityCounter();
-        
-    }
-    else if(e.target.tagName === "SPAN2"){
-        e.target.parentElement.remove();
-        counter--
-        itemSave("dataTodo",todoContainer);
-        EntityCounter();
-        
-    }
+containerListener(todoContainer,"dataTodo")
 
-}, false);
+
 
 function addTodo(){
     if(todo.value === ''){
@@ -227,13 +194,7 @@ function addTodo(){
 
 document.getElementById("counterValue").textContent = counter;
 
-//function dataSaveTodo(){
-//    localStorage.setItem("dataTodo",todoContainer.innerHTML);
-//}
 
-//function dataDisplayTodo(){
-//    todoContainer.innerHTML = localStorage.getItem("dataTodo");
-//}
 itemDisplay("dataTask",taskContainer);
 itemDisplay("dataHabit",habitContainer);
 itemDisplay("dataTodo",todoContainer);
