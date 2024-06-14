@@ -65,9 +65,14 @@ function updateDate() {
 
 updateDate()
 setInterval(updateDate, 1000)
-
+//sets the counter to current, and sets it to 0 if no data
 let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
 
+//the function Im working on to eliminate the couple things
+function keyDetector(){
+
+}
+//can possibly be eliminated
 const habitContainer = document.getElementById("habit-container")
 document.getElementById("habit").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
@@ -81,7 +86,7 @@ document.getElementById("habit").addEventListener("keypress", function(event){
 function itemFunctionMain(inputID,container,cValue){ 
     if(inputID.value === ''){
        
-    alert("Enter" + inputID);       }
+    alert("Enter Something In the Field");       }
     else{
         addItem(container,inputID);
     }
@@ -109,7 +114,7 @@ function addItem(container, cValue) {
     span2.innerHTML = "\u00d7";
     li.appendChild(span2);
 }
-    
+    //Function that allows to remove an Item and then Add or remove point
 function containerListener(container,cValue){
     container.addEventListener("click", function(e) {
         if (e.target.tagName === "SPAN") {
@@ -129,29 +134,17 @@ function containerListener(container,cValue){
 // Your other code remains the same...
 containerListener(habitContainer,"dataHabit")
 
-
+//Can possibly be eliminated
 const taskContainer = document.getElementById("task-container")
 document.getElementById("daily").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
         event.preventDefault();
-        addTask();
+        itemFunctionMain(daily,taskContainer,"dataTask");
     }
 });
 
 
-function addTask(){
-    if(daily.value === ''){
-        alert("Enter Task");
-
-    }
-    else{
-        addItem(taskContainer,daily);
-    }
-    daily.value = '';
-    itemSave("dataTask",taskContainer);
-}
-
-/* TaskContainer */
+/* Allows to remove the Dailies */
 containerListener(taskContainer,"dataTask")
 
 //Save all types of data
@@ -169,25 +162,11 @@ const todoContainer = document.getElementById("todo-Container")
 document.getElementById("todo").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
         event.preventDefault();
-        addTodo();
+        itemFunctionMain(todo,todoContainer,"dataTodo");
     }
 });
-
+//Allows to remove todo's
 containerListener(todoContainer,"dataTodo")
-
-
-
-function addTodo(){
-    if(todo.value === ''){
-        alert("Enter todo");
-
-    }
-    else{
-        addItem(todoContainer,todo);
-    }
-    todo.value = '';
-    itemSave("dataTodo",todoContainer);
-}
 
 /* TaskContainer */
 
