@@ -72,22 +72,21 @@ const habitContainer = document.getElementById("habit-container")
 document.getElementById("habit").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
         event.preventDefault();
-        addHabit();
+        itemFunctionMain(habit,habitContainer,"dataHabit");
     }
 });
 
 //Adds habit specifically
 
-function addHabit(){
-    if(habit.value === ''){
-     alert("Enter Habit");
-    
-    }
+function itemFunctionMain(inputID,container,cValue){ 
+    if(inputID.value === ''){
+       
+    alert("Enter" + inputID);       }
     else{
-        addItem(habitContainer,habit);
+        addItem(container,inputID);
     }
-    habit.value = '';
-    itemSave("dataHabit",habitContainer);
+    inputID.value = '';
+    itemSave(cValue,container);
 }
 
 
