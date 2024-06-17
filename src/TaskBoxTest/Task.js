@@ -69,11 +69,8 @@ setInterval(updateDate, 1000)
 let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
 
 //the function Im working on to eliminate the couple things
-function keyDetector(){
-
-}
-//can possibly be eliminated
 const habitContainer = document.getElementById("habit-container")
+
 document.getElementById("habit").addEventListener("keypress", function(event){
     if (event.key === "Enter"){
         event.preventDefault();
