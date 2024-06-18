@@ -1,4 +1,4 @@
-// Update time function
+// UPDATE TIME FUNCTION
 function updateClock() {
     const now = new Date()
     let hours = now.getHours()
@@ -66,7 +66,7 @@ function updateDate() {
 updateDate()
 setInterval(updateDate, 1000)
 
-// Show a scrollbar if tasks are overflowing
+// SHOW A SCROLLBAR IF TASKS ARE OVERFLOWING
 // Check overflow function
 function checkOverflow(elementBeingChecked)
 {
@@ -98,4 +98,5 @@ for (let i = 0; i < listOfTasks.length; i++) {
     }
 }
 
-
+// TASKS FUNCTIONS
+// Check if enter key is pressed while in focusing on input fields
