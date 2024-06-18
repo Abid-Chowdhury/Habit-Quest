@@ -100,3 +100,19 @@ for (let i = 0; i < listOfTasks.length; i++) {
 
 // TASKS FUNCTIONS
 // Check if enter key is pressed while in focusing on input fields
+var inputFieldElementID = 'tasks-input-field'
+document.getElementById("habit").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        itemFunctionMain(habit,habitContainer,"dataHabit");
+    }
+});
+
+// Check if input field is empty
+function inputFieldEmpty(ID) {
+    if (ID === '') {
+        return true
+    } else {
+        return false
+    }
+}
