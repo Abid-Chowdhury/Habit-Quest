@@ -300,7 +300,7 @@ header {
             border: 1px solid rgba(0,0,0,1);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             padding: 2%;
-            overflow-y:scroll;
+            overflow-y:auto;
 
             .add-task {
                 display: flex;
@@ -486,15 +486,26 @@ ul li span2:hover{
     background: var(--lightGreeneh);
 }
 
+/* Hide elements */
 .hide {
-    padding-right: 0;
+    display: none; /* This will completely hide the element */
+}
+
+/* Show elements */
+.show {
+    display: block; /* This will make the element visible */
+}
+
+/* Optionally, ensure overflow handling */
+.hide {
+    overflow: hidden; /* Ensure no scrollbars are shown for hidden elements */
 }
 
 .hide::-webkit-scrollbar {
-    width: 0;
+    width: 0; /* No scrollbar for hidden elements */
 }
 
-/* visible scrollbar for tasks */
+/* Visible scrollbar for tasks */
 ::-webkit-scrollbar {
     width: 15px;
     padding-left: 10px;

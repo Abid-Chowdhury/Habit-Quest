@@ -174,33 +174,39 @@ itemDisplay("dataTask",taskContainer);
 itemDisplay("dataHabit",habitContainer);
 itemDisplay("dataTodo",todoContainer);
 
-function checkOverflow(elementBeingChecked)
-{
-   var curOverflow = elementBeingChecked.style.overflow;
+function checkOverflow(elementBeingChecked) {
+    const curOverflow = elementBeingChecked.style.overflow;
 
-   if ( !curOverflow || curOverflow === "visible" )
-      elementBeingChecked.style.overflow = "hidden";
+    if (!curOverflow || curOverflow === "visible") {
+        elementBeingChecked.style.overflow = "hidden";
+    }
 
-   var isOverflowing = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth 
-      || elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
+    const isOverflowingWidth = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth;
+    const isOverflowingHeight = elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
 
-   elementBeingChecked.style.overflow = curOverflow;
+    console.log(`Element: ${elementBeingChecked.id}, Width Overflow: ${isOverflowingWidth}, Height Overflow: ${isOverflowingHeight}`);
 
-   return isOverflowing;
+    const isOverflowing = isOverflowingWidth || isOverflowingHeight;
+
+    elementBeingChecked.style.overflow = curOverflow;
+
+    return isOverflowing;
 }
+
+
 
 // Call function for habit/daily/todo
-//Perhaps change the name later ?
-const listOfTasks = ['habits', 'dailies', 'todos']
+const listOfTasks = ['habits', 'dailies', 'todos'];
 
-for (let i = 0; i < listOfTasks.length; i++) {
-    var elementToCheck = document.getElementById(listOfTasks[i])
-    if (!checkOverflow(elementToCheck)) {
-        elementToCheck.classList.remove('show')
-        elementToCheck.classList.add('hide')
-    } else {
-        elementToCheck.classList.remove('hide')
-        elementToCheck.classList.add('show')
-
+listOfTasks.forEach(taskId => {
+    const elementToCheck = document.getElementById(taskId);
+    if (elementToCheck) {
+        if (checkOverflow(elementToCheck)) {
+            elementToCheck.classList.remove('hide');
+            elementToCheck.classList.add('show');
+        } else {
+            elementToCheck.classList.remove('show');
+            elementToCheck.classList.add('hide');
+        }
     }
-}
+});
