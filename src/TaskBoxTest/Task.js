@@ -65,7 +65,7 @@ function updateDate() {
 
 updateDate()
 setInterval(updateDate, 1000)
-//sets the counter to current, and sets it to 0 if no data
+
 let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
 
 //the function Im working on to eliminate the couple things
