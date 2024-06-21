@@ -173,3 +173,34 @@ document.getElementById("counterValue").textContent = counter;
 itemDisplay("dataTask",taskContainer);
 itemDisplay("dataHabit",habitContainer);
 itemDisplay("dataTodo",todoContainer);
+
+function checkOverflow(elementBeingChecked)
+{
+   var curOverflow = elementBeingChecked.style.overflow;
+
+   if ( !curOverflow || curOverflow === "visible" )
+      elementBeingChecked.style.overflow = "hidden";
+
+   var isOverflowing = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth 
+      || elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
+
+   elementBeingChecked.style.overflow = curOverflow;
+
+   return isOverflowing;
+}
+
+// Call function for habit/daily/todo
+//Perhaps change the name later ?
+const listOfTasks = ['habits', 'dailies', 'todos']
+
+for (let i = 0; i < listOfTasks.length; i++) {
+    var elementToCheck = document.getElementById(listOfTasks[i])
+    if (!checkOverflow(elementToCheck)) {
+        elementToCheck.classList.remove('show')
+        elementToCheck.classList.add('hide')
+    } else {
+        elementToCheck.classList.remove('hide')
+        elementToCheck.classList.add('show')
+
+    }
+}
