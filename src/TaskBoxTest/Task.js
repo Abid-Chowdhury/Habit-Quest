@@ -174,39 +174,51 @@ itemDisplay("dataTask",taskContainer);
 itemDisplay("dataHabit",habitContainer);
 itemDisplay("dataTodo",todoContainer);
 
-function checkOverflow(elementBeingChecked) {
-    const curOverflow = elementBeingChecked.style.overflow;
+function checkOverflow(elementBeingChecked)
+{
+   var curOverflow = elementBeingChecked.style.overflow;
 
-    if (!curOverflow || curOverflow === "visible") {
-        elementBeingChecked.style.overflow = "hidden";
-    }
+   if ( !curOverflow || curOverflow === "visible" )
+      elementBeingChecked.style.overflow = "hidden";
 
-    const isOverflowingWidth = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth;
-    const isOverflowingHeight = elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
+   var isOverflowing = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth 
+      || elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
 
-    console.log(`Element: ${elementBeingChecked.id}, Width Overflow: ${isOverflowingWidth}, Height Overflow: ${isOverflowingHeight}`);
+   elementBeingChecked.style.overflow = curOverflow;
 
-    const isOverflowing = isOverflowingWidth || isOverflowingHeight;
-
-    elementBeingChecked.style.overflow = curOverflow;
-
-    return isOverflowing;
+   return isOverflowing;
 }
 
-
-
 // Call function for habit/daily/todo
-const listOfTasks = ['habits', 'dailies', 'todos'];
+const listOfTasks = ['habits-task-list', 'daily-task-list', 'todo-task-list']
 
-listOfTasks.forEach(taskId => {
-    const elementToCheck = document.getElementById(taskId);
-    if (elementToCheck) {
-        if (checkOverflow(elementToCheck)) {
-            elementToCheck.classList.remove('hide');
-            elementToCheck.classList.add('show');
-        } else {
-            elementToCheck.classList.remove('show');
-            elementToCheck.classList.add('hide');
-        }
+for (let i = 0; i < listOfTasks.length; i++) {
+    var elementToCheck = document.getElementById(listOfTasks[i])
+    if (!checkOverflow(elementToCheck)) {
+        elementToCheck.classList.remove('show')
+        elementToCheck.classList.add('hide')
+    } else {
+        elementToCheck.classList.remove('hide')
+        elementToCheck.classList.add('show')
+
+    }
+}
+
+// TASKS FUNCTIONS
+// Check if enter key is pressed while in focusing on input fields
+var inputFieldElementID = 'tasks-input-field'
+document.getElementById("habit").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        itemFunctionMain(habit,habitContainer,"dataHabit");
     }
 });
+
+// Check if input field is empty
+function inputFieldEmpty(ID) {
+    if (ID === '') {
+        return true
+    } else {
+        return false
+    }
+}
