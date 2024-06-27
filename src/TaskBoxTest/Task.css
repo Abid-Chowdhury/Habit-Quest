@@ -522,3 +522,7 @@ ul li span2:hover{
     background-color: var(--lightGreeneh);
     border-radius: 10px;
 }
+
+.hide-overflow-x {
+    overflow-x: hidden;
+}
