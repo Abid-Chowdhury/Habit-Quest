@@ -284,6 +284,7 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     
+    
     .task-container {
         width: 30%;
         height: 40vh;
@@ -299,6 +300,7 @@ header {
             border: 1px solid rgba(0,0,0,1);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             padding: 2%;
+            overflow-y:auto;
 
             .add-task {
                 display: flex;
@@ -343,6 +345,7 @@ header {
                     padding: 2%;
                     margin-bottom: 2%;
                     border: 2px solid var(--lightGreener);
+                    
 
                     .left {
                         display: flex;
@@ -399,4 +402,127 @@ header {
     }
 
 }
+/**/
+ul{
+    display:block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end:1em;
+    margin-inline-end: 0px;
+    padding-inline: 0px;
+    unicode-bidi: isolate;
+    color:var(--whiteh);
+    
+}    
+/*Task List*/
+ul li{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darkGreenr);
+    border-radius: 8px;
+    padding: 2%;
+    margin-bottom: 2%;
+    height:32px;
+    border: 2px solid var(--lightGreener);
+    
 
+    .left {
+        display: flex;
+        align-items: center;
+        .task-label {
+            font-size: 1.5em;
+            color: var(--whiteh);
+            margin: 0;                        
+        }
+    }
+}
+
+/*The Checkmark */
+ul li span{
+    position:absolute;
+    left:275px;
+    top:4px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 40%;
+    cursor:pointer;
+    color:var(--whiteh);
+    background:var(--lightGreener);
+    
+}
+/*The Task Item Hover*/
+ul li:hover{
+    background: var(--lightGreener);
+    transition: .3s ease;
+}
+/*The Button Hover*/
+ul li span:hover{
+    background: var(--lightGreeneh);
+}
+
+/*The X mark*/
+ul li span2{
+    position:relative;
+    left: 10px;
+    top:-3px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 40%;
+    cursor:pointer;
+    color:var(--whiteh);
+    background:var(--lightGreener);
+}
+ul li span2:hover{
+    background: var(--lightGreeneh);
+}
+
+/* Hide elements */
+.hide {
+    display: none; /* This will completely hide the element */
+}
+
+/* Show elements */
+.show {
+    display: block; /* This will make the element visible */
+}
+
+/* Optionally, ensure overflow handling */
+.hide {
+    overflow: hidden; /* Ensure no scrollbars are shown for hidden elements */
+}
+
+.hide::-webkit-scrollbar {
+    width: 0; /* No scrollbar for hidden elements */
+}
+
+/* Visible scrollbar for tasks */
+::-webkit-scrollbar {
+    width: 15px;
+    padding-left: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px gray;
+    background-color: var(--darkGreeneh);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--lightGreeneh);
+    border-radius: 10px;
+}
+
+.hide-overflow-x {
+    overflow-x: hidden;
+}

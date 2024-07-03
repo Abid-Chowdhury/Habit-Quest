@@ -65,3 +65,163 @@ function updateDate() {
 
 updateDate()
 setInterval(updateDate, 1000)
+
+let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
+
+//the function Im working on to eliminate the couple things
+const habitContainer = document.getElementById("habit-container")
+
+document.getElementById("habit").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        itemFunctionMain(habit,habitContainer,"dataHabit");
+    }
+});
+
+//Adds habit specifically
+
+function itemFunctionMain(inputID,container,cValue){ 
+    if(inputID.value === ''){
+       
+    alert("Enter Something In the Field");       }
+    else{
+        addItem(container,inputID);
+    }
+    inputID.value = '';
+    itemSave(cValue,container);
+}
+
+
+//basically sets the counter value after adding or subtracting a task
+function EntityCounter() {
+    localStorage.setItem('counter', counter);
+    document.getElementById("counterValue").textContent = counter;
+    console.log(counter);
+}
+//This is a function to add a Check Mark/X mark
+
+function addItem(container, cValue) {
+    let li = document.createElement("li");
+    li.innerHTML = cValue.value; 
+    container.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = "&#10003;";
+    li.appendChild(span);
+    let span2 = document.createElement("span2");
+    span2.innerHTML = "\u00d7";
+    li.appendChild(span2);
+}
+    //Function that allows to remove an Item and then Add or remove point
+function containerListener(container,cValue){
+    container.addEventListener("click", function(e) {
+        if (e.target.tagName === "SPAN") {
+            e.target.parentElement.remove();
+            counter++;
+            itemSave(cValue,container);
+            EntityCounter();
+        } else if (e.target.tagName === "SPAN2") {
+            e.target.parentElement.remove();
+            counter--;
+            itemSave(cValue,container);
+            EntityCounter();
+        }
+    }, false);
+
+}
+// Your other code remains the same...
+containerListener(habitContainer,"dataHabit")
+
+//Can possibly be eliminated
+const taskContainer = document.getElementById("task-container")
+document.getElementById("daily").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        itemFunctionMain(daily,taskContainer,"dataTask");
+    }
+});
+
+
+/* Allows to remove the Dailies */
+containerListener(taskContainer,"dataTask")
+
+//Save all types of data
+function itemSave(dataType,containerType){
+    localStorage.setItem(dataType,containerType.innerHTML);
+}
+//Displays all type of data
+function itemDisplay(dataType,containerType){
+    containerType.innerHTML = localStorage.getItem(dataType);
+}
+
+
+
+const todoContainer = document.getElementById("todo-Container")
+document.getElementById("todo").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        itemFunctionMain(todo,todoContainer,"dataTodo");
+    }
+});
+//Allows to remove todo's
+containerListener(todoContainer,"dataTodo")
+
+/* TaskContainer */
+
+document.getElementById("counterValue").textContent = counter;
+
+
+itemDisplay("dataTask",taskContainer);
+itemDisplay("dataHabit",habitContainer);
+itemDisplay("dataTodo",todoContainer);
+
+function checkOverflow(elementBeingChecked)
+{
+   var curOverflow = elementBeingChecked.style.overflow;
+
+   if ( !curOverflow || curOverflow === "visible" )
+      elementBeingChecked.style.overflow = "hidden";
+
+   var isOverflowing = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth 
+      || elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
+
+   elementBeingChecked.style.overflow = curOverflow;
+
+   return isOverflowing;
+}
+
+// Call function for habit/daily/todo
+const listOfTasks = ['habits-task-list', 'daily-task-list', 'todo-task-list']
+
+//Possibly redundant code ? 
+//Works fine except unecessarily asking you to enter stuff
+//Possible discussion ? 
+for (let i = 0; i < listOfTasks.length; i++) {
+    var elementToCheck = document.getElementById(listOfTasks[i])
+    if (!checkOverflow(elementToCheck)) {
+        elementToCheck.classList.remove('show')
+        elementToCheck.classList.add('hide')
+    } else {
+        elementToCheck.classList.remove('hide')
+        elementToCheck.classList.add('show')
+
+    }
+}
+
+// TASKS FUNCTIONS
+// Check if enter key is pressed while in focusing on input fields
+var inputFieldElementID = 'tasks-input-field'
+document.getElementById("habit").addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        itemFunctionMain(habit,habitContainer,"dataHabit");
+    }
+});
+
+// Check if input field is empty
+function inputFieldEmpty(ID) {
+    if (ID === '') {
+        return true
+    } else {
+        return false
+    }
+}

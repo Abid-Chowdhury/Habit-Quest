@@ -36,9 +36,9 @@
                     <img src="../Assets/Symbols/FireNoBG.png">
                     <p>10</p>
                 </div>
-                <div class="coins">
+                <div class="coins" id="counter">
                     <img src="../Assets/Symbols/CoinNoBG.png">
-                    <p>100</p>
+                    <p id="counterValue">100</p>
                 </div>
                 <div class="profile">
                     <img src="..\Assets\Symbols\PorscheCircleNoBG.png">
@@ -82,43 +82,14 @@
 
                 <div class="task-body">
                     <div class="add-task">
-                        <input type="text" id="habits" name="habits" placeholder="Add a Habit">
+                        <input type="text" id="habit" name="habit" placeholder="Add a Habit">
+                    
+                    
                     </div>
-
-                    <div class="task-list">
-                        <div class="task-item" id="task-1">
-                            <div class="left">
-                                <p class="task-label">Code for 30 minutes</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-
-                        <div class="task-item" id="task-2">
-                            <div class="left">
-                                <p class="task-label">Workout for 10 minutes</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-
-                        <div class="task-item" id="task-3">
-                            <div class="left">
-                                <p class="task-label">Read book for 5 minutes</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <ul id="habit-container"> </ul>
+                   
+                        
+                                  
                 </div>
             </div>
 
@@ -129,43 +100,10 @@
 
                 <div class="task-body">
                     <div class="add-task">
-                        <input type="text" id="habits" name="habits" placeholder="Add a Daily">
+                        <input type="text" id="daily" name="dailies" placeholder="Add a Daily">
                     </div>
 
-                    <div class="task-list">
-                        <div class="task-item" id="task-1">
-                            <div class="left">
-                                <p class="task-label">Work on coding project</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-
-                        <div class="task-item" id="task-2">
-                            <div class="left">
-                                <p class="task-label">Wake up on time</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-
-                        <div class="task-item" id="task-3">
-                            <div class="left">
-                                <p class="task-label">Cook dinner</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <ul id="task-container"></ul>
                 </div>
             </div>
 
@@ -176,31 +114,14 @@
 
                 <div class="task-body">
                     <div class="add-task">
-                        <input type="text" id="habits" name="habits" placeholder="Add a To Do">
+                        <input type="text" id="todo" name="todos" placeholder="Add a To Do">
                     </div>
 
-                    <div class="task-list">
-                        <div class="task-item" id="task-1">
-                            <div class="left">
-                                <p class="task-label">Go to the doctor</p>
-                            </div>
+                    
 
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
-
-                        <div class="task-item" id="task-2">
-                            <div class="left">
-                                <p class="task-label">Finish homework</p>
-                            </div>
-
-                            <div class="right">
-                                <div class="done-button"><img src="..\Assets\Symbols\whiteCheck.svg"></div>
-                                <div class="cancel-button"><img src="..\Assets\Symbols\whiteX.svg"></div>
-                            </div>
-                        </div>
+                            
+                       <ul id ="todo-Container"></ul>
+                     
 
                     </div>
                 </div>
