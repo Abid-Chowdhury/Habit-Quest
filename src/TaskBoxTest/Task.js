@@ -84,6 +84,11 @@ function itemFunctionMain(inputID,container,cValue){
     if(inputID.value === ''){
        
     alert("Enter Something In the Field");       }
+    //Prevents User from adding too many letters to habits.
+    // It is a placeholder until elipsis is implemented
+    else if(inputID.value.length > 60 ){
+        alert("You cannot have more than 60 Characters!");
+    }
     else{
         addItem(container,inputID);
     }
