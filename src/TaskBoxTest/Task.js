@@ -84,6 +84,11 @@ function itemFunctionMain(inputID,container,cValue){
     if(inputID.value === ''){
        
     alert("Enter Something In the Field");       }
+    //Prevents User from adding too many letters to habits.
+    // It is a placeholder until elipsis is implemented
+    else if(inputID.value.length > 60 ){
+        alert("You cannot have more than 60 Characters!");
+    }
     else{
         addItem(container,inputID);
     }
@@ -192,9 +197,6 @@ function checkOverflow(elementBeingChecked)
 // Call function for habit/daily/todo
 const listOfTasks = ['habits-task-list', 'daily-task-list', 'todo-task-list']
 
-//Possibly redundant code ? 
-//Works fine except unecessarily asking you to enter stuff
-//Possible discussion ? 
 for (let i = 0; i < listOfTasks.length; i++) {
     var elementToCheck = document.getElementById(listOfTasks[i])
     if (!checkOverflow(elementToCheck)) {
