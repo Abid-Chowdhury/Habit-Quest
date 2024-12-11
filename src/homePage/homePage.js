@@ -80,17 +80,35 @@ document.getElementById("habit").addEventListener("keypress", function(event){
 
 //Adds habit specifically
 
-function itemFunctionMain(inputID,container,cValue){ 
-    if(inputID.value === ''){
-       
-    alert("Enter Something In the Field");       }
-    else{
-        addItem(container,inputID);
+//function itemFunctionMain(inputID,container,cValue){ 
+//    if(inputID.value === ''){
+//       
+ //   alert("Enter Something In the Field");       }
+    //Prevents User from adding too many letters to habits.
+    // It is a placeholder until elipsis is implemented
+//    else if(inputID.value.length > 20 ){
+//        inputID.value = inputID.value.substring(0, 20) + "...";
+//    }
+//    else{
+//        addItem(container,inputID);
+//    }
+//    inputID.value = '';
+//    itemSave(cValue,container);
+//}
+function itemFunctionMain(inputID, container, cValue) { 
+    if (inputID.value === '') {
+        alert("Enter Something In the Field");
+    } else {
+        let originalValue = inputID.value;
+        let displayvalue = originalValue;
+        if (originalValue.length > 20) {
+            displayvalue = inputID.value.substring(0, 20) + "...";
+        }
+        addItem(container, displayvalue, originalValue);
     }
-    inputID.value = '';
-    itemSave(cValue,container);
+    inputID.value = ''; 
+    itemSave(cValue, container);
 }
-
 
 //basically sets the counter value after adding or subtracting a task
 function EntityCounter() {
@@ -100,9 +118,11 @@ function EntityCounter() {
 }
 //This is a function to add a Check Mark/X mark
 
-function addItem(container, cValue) {
+function addItem(container, displayvalue, originalValue) {
+    
     let li = document.createElement("li");
-    li.innerHTML = cValue.value; 
+    li.innerHTML = displayvalue; 
+    li.setAttribute("title", originalValue);
     container.appendChild(li);
     let span = document.createElement("span");
     span.innerHTML = "&#10003;";
@@ -110,6 +130,7 @@ function addItem(container, cValue) {
     let span2 = document.createElement("span2");
     span2.innerHTML = "\u00d7";
     li.appendChild(span2);
+    
 }
     //Function that allows to remove an Item and then Add or remove point
 function containerListener(container,cValue){
@@ -174,27 +195,26 @@ itemDisplay("dataTask",taskContainer);
 itemDisplay("dataHabit",habitContainer);
 itemDisplay("dataTodo",todoContainer);
 
-function checkOverflow(elementBeingChecked)
-{
-   var curOverflow = elementBeingChecked.style.overflow;
+// Temporarily Disabled due to redundancy 
 
-   if ( !curOverflow || curOverflow === "visible" )
-      elementBeingChecked.style.overflow = "hidden";
-
-   var isOverflowing = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth 
-      || elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
-
-   elementBeingChecked.style.overflow = curOverflow;
-
-   return isOverflowing;
-}
+//function checkOverflow(elementBeingChecked)
+//{
+//   var curOverflow = elementBeingChecked.style.overflow;
+//
+//   if ( !curOverflow || curOverflow === "visible" )
+//      elementBeingChecked.style.overflow = "hidden";
+//
+//   var isOverflowing = elementBeingChecked.clientWidth < elementBeingChecked.scrollWidth 
+//      || elementBeingChecked.clientHeight < elementBeingChecked.scrollHeight;
+//
+//   elementBeingChecked.style.overflow = curOverflow;
+//
+//   return isOverflowing;
+//}
 
 // Call function for habit/daily/todo
 const listOfTasks = ['habits-task-list', 'daily-task-list', 'todo-task-list']
 
-//Possibly redundant code ? 
-//Works fine except unecessarily asking you to enter stuff
-//Possible discussion ? 
 for (let i = 0; i < listOfTasks.length; i++) {
     var elementToCheck = document.getElementById(listOfTasks[i])
     if (!checkOverflow(elementToCheck)) {
@@ -225,3 +245,4 @@ function inputFieldEmpty(ID) {
         return false
     }
 }
+

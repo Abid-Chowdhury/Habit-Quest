@@ -1,0 +1,43 @@
+/* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#sword {
+    width: 10px;
+    height: 100px;
+    background-color: silver;
+    border: 2px solid gray;
+    position: relative;
+    transform-origin: top center;
+}
+
+/* Sword Swing Animation */
+@keyframes swordSwing {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.swing {
+    animation: swordSwing 0.5s ease-in-out;
+}

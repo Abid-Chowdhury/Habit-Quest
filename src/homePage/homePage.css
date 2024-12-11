@@ -442,7 +442,7 @@ ul li{
 /*The Checkmark */
 ul li span{
     position:absolute;
-    left:275px;
+    left:70%;
     top:4px;
     width: 40px;
     height: 40px;
@@ -468,9 +468,9 @@ ul li span:hover{
 
 /*The X mark*/
 ul li span2{
-    position:relative;
-    left: 10px;
-    top:-3px;
+    position:absolute;
+    left: 85%;
+    top:4px;
     width: 40px;
     height: 40px;
     font-size: 22px;
